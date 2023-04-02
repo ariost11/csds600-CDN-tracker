@@ -30,7 +30,7 @@ def rewrite_tranco_list():
 def run_zdns_requests():
     print("Running ZDNS Requests...")
     #get JSONs
-    command = "cat tranco_list.txt | ./zdns/zdns --iterative --udp-only A"
+    command = "cat tranco_list.txt | ./zdns --iterative --udp-only A"
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     output,error = process.communicate()
     json_list = output.decode().split("\n")
