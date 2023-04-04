@@ -19,9 +19,9 @@ def rewrite_tranco_list():
         print("Reformating Tranco List...")
         file = pd.read_csv("download_list.csv", header=None)
         with open("tranco_list.txt", "a") as f:
-            max_file_size = 10
+            max_file_size = 50
             for i in range(max_file_size if len(file.index) > max_file_size else len(file.index)):
-                f.write(file.iloc[i, 1] + "\n")
+                f.write("www." + file.iloc[i, 1] + "\n")
         print("Finished Reformating List...")
     else:
         print("Already Has Formatted Tranco List...")
@@ -34,12 +34,32 @@ def run_zdns_requests():
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     output,error = process.communicate()
     json_list = output.decode().split("\n")
-    json_list = json_list[:len(json_list) - 1] 
+    json_list = json_list[:len(json_list) - 1]
 
     #store in dictionary
     ip_map = {}
-    for e in json_list:
-        ip_map[json.loads(e)["name"]] = json.loads(e)["data"]["resolver"]
+
+    for i in json_list:
+        if "answers" in json.loads(i)["data"]:
+            hit = False
+            for answer in json.loads(i)["data"]["answers"]:
+                if answer["type"] == "CNAME":
+                    ip_map[answer["name"]] = answer["answer"]
+                    hit = True
+                    break
+            if not hit:
+                if "resolver" in json.loads(i)["data"]:
+                    ip_map[json.loads(i)["name"]] = json.loads(i)["data"]["resolver"]
+                else:
+                    ip_map[json.loads(i)["name"]] = "NA"
+        else:
+            if "resolver" in json.loads(i)["data"]:
+                ip_map[json.loads(i)["name"]] = json.loads(i)["data"]["resolver"]
+            else:
+                ip_map[json.loads(i)["name"]] = "NA"
+
+    #for e in json_list:
+        #ip_map[json.loads(e)["name"]] = json.loads(e)["data"]["resolver"]
     for i in ip_map:
         print(i + " " + ip_map[i])
     print("Completed ZDNS Requests...")
