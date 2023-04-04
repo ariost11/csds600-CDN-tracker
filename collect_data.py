@@ -4,6 +4,87 @@ import pandas as pd
 import json
 import subprocess
 
+CDN_map = { 
+  ".clients.turbobytes.net":"TurboBytes",
+  ".turbobytes-cdn.com":"TurboBytes",
+  ".afxcdn.net":"afxcdn.net",
+  ".akamai.net":"Akamai",
+  ".akamaiedge.net":"Akamai",
+  ".akadns.net":"Akamai",
+  ".akamaitechnologies.com":"Akamai",
+  ".gslb.tbcache.com":"Alimama",
+  ".cloudfront.net":"Amazon Cloudfront",
+  ".anankecdn.com.br":"Ananke",
+  ".att-dsa.net":"AT&T",
+  ".azioncdn.net":"Azion",
+  ".belugacdn.com":"BelugaCDN",
+  ".bluehatnetwork.com":"Blue Hat Network",
+  ".systemcdn.net":"EdgeCast",
+  ".cachefly.net":"Cachefly",
+  ".cdn77.net":"CDN77",
+  ".cdn77.org":"CDN77",
+  ".panthercdn.com":"CDNetworks",
+  ".cdngc.net":"CDNetworks",
+  ".gccdn.net":"CDNetworks",
+  ".gccdn.cn":"CDNetworks",
+  ".cdnify.io":"CDNify",
+  ".ccgslb.com":"ChinaCache",
+  ".ccgslb.net":"ChinaCache",
+  ".c3cache.net":"ChinaCache",
+  ".chinacache.net":"ChinaCache",
+  ".c3cdn.net":"ChinaCache",
+  ".lxdns.com":"ChinaNetCenter",
+  ".speedcdns.com":"QUANTIL/ChinaNetCenter",
+  ".mwcloudcdn.com":"QUANTIL/ChinaNetCenter",
+  ".cloudflare.com":"Cloudflare",
+  ".cloudflare.net":"Cloudflare",
+  ".edgecastcdn.net":"EdgeCast",
+  ".adn.":"EdgeCast",
+  ".wac.":"EdgeCast",
+  ".wpc.":"EdgeCast",
+  ".fastly.net":"Fastly",
+  ".fastlylb.net":"Fastly",
+  ".google.":"Google",
+  "googlesyndication.":"Google",
+  "youtube.":"Google",
+  ".googleusercontent.com":"Google",
+  ".l.doubleclick.net":"Google",
+  "d.gcdn.co":"G-core",
+  ".hiberniacdn.com":"Hibernia",
+  ".hwcdn.net":"Highwinds",
+  ".incapdns.net":"Incapsula",
+  ".inscname.net":"Instartlogic",
+  ".insnw.net":"Instartlogic",
+  ".internapcdn.net":"Internap",
+  ".kxcdn.com":"KeyCDN",
+  ".lswcdn.net":"LeaseWeb CDN",
+  ".footprint.net":"Level3",
+  ".llnwd.net":"Limelight",
+  ".lldns.net":"Limelight",
+  ".netdna-cdn.com":"MaxCDN",
+  ".netdna-ssl.com":"MaxCDN",
+  ".netdna.com":"MaxCDN",
+  ".stackpathdns.com":"StackPath",
+  ".mncdn.com":"Medianova",
+  ".instacontent.net":"Mirror Image",
+  ".mirror-image.net":"Mirror Image",
+  ".cap-mii.net":"Mirror Image",
+  ".rncdn1.com":"Reflected Networks",
+  ".simplecdn.net":"Simple CDN",
+  ".swiftcdn1.com":"SwiftCDN",
+  ".swiftserve.com":"SwiftServe",
+  ".gslb.taobao.com":"Taobao",
+  ".cdn.bitgravity.com":"Tata communications",
+  ".cdn.telefonica.com":"Telefonica",
+  ".vo.msecnd.net":"Windows Azure",
+  ".ay1.b.yahoo.com":"Yahoo",
+  ".yimg.":"Yahoo",
+  ".zenedge.net":"Zenedge",
+  ".b-cdn.net":"BunnyCDN",
+  ".ksyuncdn.com":"Kingsoft"
+}
+
+
 def download_list():
     if not os.path.isfile("download_list.csv"):
         print("Downloading Tranco List...")
@@ -19,7 +100,7 @@ def rewrite_tranco_list():
         print("Reformating Tranco List...")
         file = pd.read_csv("download_list.csv", header=None)
         with open("tranco_list.txt", "a") as f:
-            max_file_size = 50
+            max_file_size = 1000
             for i in range(max_file_size if len(file.index) > max_file_size else len(file.index)):
                 f.write("www." + file.iloc[i, 1] + "\n")
         print("Finished Reformating List...")
@@ -30,7 +111,7 @@ def rewrite_tranco_list():
 def run_zdns_requests():
     print("Running ZDNS Requests...")
     #get JSONs
-    command = "cat tranco_list.txt | ./zdns --iterative --udp-only A"
+    command = "cat tranco_list.txt | ./zdns --iterative --max-depth 4 --udp-only A"
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     output,error = process.communicate()
     json_list = output.decode().split("\n")
@@ -57,11 +138,23 @@ def run_zdns_requests():
                 ip_map[json.loads(i)["name"]] = json.loads(i)["data"]["resolver"]
             else:
                 ip_map[json.loads(i)["name"]] = "NA"
-
-    #for e in json_list:
-        #ip_map[json.loads(e)["name"]] = json.loads(e)["data"]["resolver"]
+    
+    file = open("ip_map.txt", "w")
+    file.close()
+    file = open("ip_map.txt", "a")
+    count = 0
     for i in ip_map:
-        print(i + " " + ip_map[i])
+        added = False
+        for j in CDN_map:
+            if j in ip_map[i]:
+                file.write(i + " " + CDN_map[j] + "\n")
+                added = True
+                count = count + 1
+                break
+        if not added:
+            file.write(i + " " + ip_map[i] + "\n")
+    file.write("Count: " + str(count) + "\n")
+    file.close()
     print("Completed ZDNS Requests...")
 
 download_list()
