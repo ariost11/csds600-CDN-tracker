@@ -91,27 +91,39 @@ def download_list():
         url = "https://tranco-list.eu/download/Z2XKG/full"
         r = requests.get(url, allow_redirects=True)
         open("download_list.csv", "wb").write(r.content)
-        print("Finished Downloading List...")
+        print("Finished Downloading Tranco List...")
     else:
-        print("Already Has Trando List Downloaded...")
+        print("Already Has Tranco List Downloaded...")
 
 def rewrite_tranco_list():
+    max_file_size = 100
     if not os.path.isfile("tranco_list.txt"):
         print("Reformating Tranco List...")
         file = pd.read_csv("download_list.csv", header=None)
         with open("tranco_list.txt", "a") as f:
-            max_file_size = 1000
             for i in range(max_file_size if len(file.index) > max_file_size else len(file.index)):
                 f.write("www." + file.iloc[i, 1] + "\n")
-        print("Finished Reformating List...")
+        print("Finished Reformating Tranco List...")
     else:
         print("Already Has Formatted Tranco List...")
+
+
+def download_ip_to_AS():
+    if not os.path.isfile("ip_to_AS.tsv"):
+        print("Downloading ip:AS List...")
+        url = "https://iptoasn.com/data/ip2asn-combined.tsv.gz"
+        r = requests.get(url, allow_redirects=True)
+        open("ip_to_AS.tsv.gz", "wb").write(r.content)
+        os.system("gzip -d ip_to_AS.tsv.gz")
+        print("Finished Downloading ip:AS List...")
+    else:
+        print("Already Has ip:AS List Downloaded...")
 
 
 def run_zdns_requests():
     print("Running ZDNS Requests...")
     #get JSONs
-    command = "cat tranco_list.txt | ./zdns --iterative --max-depth 4 --udp-only A"
+    command = "cat tranco_list.txt | ./zdns --iterative --udp-only A"
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
     output,error = process.communicate()
     json_list = output.decode().split("\n")
@@ -159,4 +171,5 @@ def run_zdns_requests():
 
 download_list()
 rewrite_tranco_list()
+download_ip_to_AS()
 run_zdns_requests()
