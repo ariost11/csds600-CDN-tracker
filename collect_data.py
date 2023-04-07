@@ -123,6 +123,8 @@ CDN_map = {
   ".ksyuncdn.":"Kingsoft"
 }
 
+ip_AS_map = {}
+
 num_found = 0
 
 def download_list():
@@ -167,35 +169,45 @@ def match(mask, IP):
     range3 = range(int(min_ip[-1]), int(max_ip[-1]) + 1)
 
     ip = IP.split(".")
-    if ( (int(ip[-2]) in range3) and (int(ip[-1]) in range4) ):
+    if ((int(ip[-2]) in range3) and (int(ip[-1]) in range4)):
         return True
 
     return False
+
+def match2(mask, IP):
+    min_ip = mask.split(' - ')[0].split('.')
+    max_ip = mask.split(' - ')[1].split('.')
+    ip = IP.split('.')
+    for i in range(4):
+        if int(ip[i]) < int(min_ip[i]) or int(ip[i]) > int(max_ip[i]):
+            return False
+    return True
   
 
 def rewrite_ip_to_AS():
-    if not os.path.isfile("ip_AS_map.txt"):
-        print("Reformating ip:AS List...")
-        file = pd.read_table("ip_to_AS.tsv", header=None, usecols=[0,1,4])
-        for i in range(len(file.index)):
-
-            ip_AS_map[]
-            f.write("[" + file.iloc[i, 0] + ", " + file.iloc[i, 1] + "]\n")
-    else:
-        print("Already Has Formatted ip:AS List...")
+    print("Reformating ip:AS List...")
+    file = pd.read_table("ip_to_AS.tsv", header=None, usecols=[0,1,4])
+    for i in range(len(file.index)):
+        mask = file.iloc[i, 0] + " - " + file.iloc[i, 1]
+        if len(mask.split(".")[0]) <= 3:
+            ip_AS_map[mask] = file.iloc[i, 2]
+    print(ip_AS_map)
+    print("Finished Formatting ip:AS List...")
 
         
 def get_cdn(hostname):
-    #check for CNAME mapping
     for i in CDN_map:
+        #check for CNAME mapping
         if i in hostname:
             global num_found
             num_found += 1
             return CDN_map[i]
+    
+        #check for IP mapping
+        for j in ip_AS_map:
+            if match2(j, i):
+                return ip_AS_map[j]
 
-    #check for ip range
-    for i in IP_map:
-        return "IP"
     return "Not Found"
 
 
@@ -246,4 +258,4 @@ download_list()
 rewrite_tranco_list()
 download_ip_to_AS()
 rewrite_ip_to_AS()
-#run_zdns_requests()
+run_zdns_requests()
