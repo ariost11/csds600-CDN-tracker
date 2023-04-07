@@ -5,6 +5,45 @@ import json
 import subprocess
 
 CDN_map = { 
+  "alibaba":"Alibaba Cloud",
+  "ateme":"ATEME",
+  "baidu":"Baidu",
+  "edgenext":"BaishanCloud",
+  "baishan":"BaishanCloud",
+  "broad":"Broadpeak",
+  "broadpeak":"Broadpeak",
+  "byteplus":"BytePlus",
+  "bytedance":"ByteDance",
+  "cdnsun":"CDNsun",
+  "cdn-sun":"CDNsun",
+  "ccom":"China Telecom",
+  "c-com":"China Telecom",
+  "comcast":"Comcast Technology Solutions",
+  "edgio":"Edgio",
+  "gcore":"Gcore",
+  "g-core":"Gcore",
+  "g-connect":"GlobalConnect",
+  "gconnect":"GlobalConnect",
+  "globalconnect":"GlobalConnect",
+  "global-connect":"GlobalConnect",
+  "huawei":"Huawei Cloud",
+  "j-stream":"Jet-Stream Cloud",
+  "jet-stream":"Jet-Stream Cloud",
+  "jetstream":"Jet-Stream Cloud",
+  "jstream":"Jet-Stream Cloud",
+  "lumen":"Lumen",
+  "m-streaming":"MainStreaming",
+  "mstreaming":"MainStreaming",
+  "mazure":"Microsoft Azure",
+  "ngenix":"Ngenix",
+  "qwilt":"Qwilt",
+  "tencent":"Tencent Cloud",
+  "tcloud":"Tencent Cloud",
+  "t-cloud":"Tencent Cloud",
+  "tencent-cloud":"Tencent Cloud",
+  "varnish":"Varnish Software",
+  "vecima":"Vecima",
+  "velocix":"Velocix",
   ".clients.turbobytes.":"TurboBytes",
   ".turbobytes-cdn.":"TurboBytes",
   ".afxcdn.":"afxcdn.net",
@@ -84,6 +123,7 @@ CDN_map = {
   ".ksyuncdn.":"Kingsoft"
 }
 
+num_found = 0
 
 def download_list():
     if not os.path.isfile("download_list.csv"):
@@ -120,6 +160,14 @@ def download_ip_to_AS():
         print("Already Has ip:AS List Downloaded...")
 
 
+def get_cdn(hostname):
+    for i in CDN_map:
+        if hostname in i:
+            num_found += 1
+            return CDN_Map[i]
+    return "Not Found"
+
+
 def run_zdns_requests():
     print("Running ZDNS Requests...")
     #get JSONs
@@ -154,18 +202,9 @@ def run_zdns_requests():
     file = open("ip_map.txt", "w")
     file.close()
     file = open("ip_map.txt", "a")
-    count = 0
     for i in ip_map:
-        added = False
-        for j in CDN_map:
-            if j in ip_map[i]:
-                file.write(i + " " + CDN_map[j] + "\n")
-                added = True
-                count = count + 1
-                break
-        if not added:
-            file.write(i + " " + ip_map[i] + "\n")
-    file.write("Count: " + str(count) + "\n")
+        file.write(i + " " + get_cdn(i) + "\n")    
+    file.write("Percent Found: " + str(num_found / len(ip_map)) + "\n")
     file.close()
     print("Completed ZDNS Requests...")
 
