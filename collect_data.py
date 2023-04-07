@@ -5,122 +5,149 @@ import json
 import subprocess
 
 CDN_map = { 
-  "alibaba":"Alibaba Cloud",
-  "ateme":"ATEME",
-  "baidu":"Baidu",
-  "edgenext":"BaishanCloud",
-  "baishan":"BaishanCloud",
-  "broad":"Broadpeak",
-  "broadpeak":"Broadpeak",
-  "byteplus":"BytePlus",
-  "bytedance":"ByteDance",
-  "cdnsun":"CDNsun",
-  "cdn-sun":"CDNsun",
-  "ccom":"China Telecom",
-  "c-com":"China Telecom",
-  "comcast":"Comcast Technology Solutions",
-  "edgio":"Edgio",
-  "gcore":"Gcore",
-  "g-core":"Gcore",
-  "g-connect":"GlobalConnect",
-  "gconnect":"GlobalConnect",
-  "globalconnect":"GlobalConnect",
-  "global-connect":"GlobalConnect",
-  "huawei":"Huawei Cloud",
-  "j-stream":"Jet-Stream Cloud",
-  "jet-stream":"Jet-Stream Cloud",
-  "jetstream":"Jet-Stream Cloud",
-  "jstream":"Jet-Stream Cloud",
-  "lumen":"Lumen",
-  "m-streaming":"MainStreaming",
-  "mstreaming":"MainStreaming",
-  "mazure":"Microsoft Azure",
-  "ngenix":"Ngenix",
-  "qwilt":"Qwilt",
-  "tencent":"Tencent Cloud",
-  "tcloud":"Tencent Cloud",
-  "t-cloud":"Tencent Cloud",
-  "tencent-cloud":"Tencent Cloud",
-  "varnish":"Varnish Software",
-  "vecima":"Vecima",
-  "velocix":"Velocix",
-  ".clients.turbobytes.":"TurboBytes",
-  ".turbobytes-cdn.":"TurboBytes",
-  ".afxcdn.":"afxcdn.net",
-  ".akamai.":"Akamai",
-  ".akamaiedge.":"Akamai",
-  ".akadns.":"Akamai",
-  ".akamaitechnologies.":"Akamai",
-  ".gslb.tbcache.":"Alimama",
-  ".cloudfront.":"Amazon Cloudfront",
-  ".anankecdn.":"Ananke",
-  ".att-dsa.":"AT&T",
-  ".azioncdn.":"Azion",
-  ".belugacdn.":"BelugaCDN",
-  ".bluehatnetwork.":"Blue Hat Network",
-  ".systemcdn.":"EdgeCast",
-  ".cachefly.":"Cachefly",
-  ".cdn77.":"CDN77",
-  ".cdn77.":"CDN77",
-  ".panthercdn.":"CDNetworks",
-  ".cdngc.":"CDNetworks",
-  ".gccdn.":"CDNetworks",
-  ".gccdn.":"CDNetworks",
-  ".cdnify.":"CDNify",
-  ".ccgslb.":"ChinaCache",
-  ".ccgslb.":"ChinaCache",
-  ".c3cache.":"ChinaCache",
-  ".chinacache.":"ChinaCache",
-  ".c3cdn.":"ChinaCache",
-  ".lxdns.":"ChinaNetCenter",
-  ".speedcdns.":"QUANTIL/ChinaNetCenter",
-  ".mwcloudcdn.":"QUANTIL/ChinaNetCenter",
-  ".cloudflare.":"Cloudflare",
-  ".cloudflare.":"Cloudflare",
-  ".edgecastcdn.":"EdgeCast",
-  ".adn.":"EdgeCast",
-  ".wac.":"EdgeCast",
-  ".wpc.":"EdgeCast",
-  ".fastly.":"Fastly",
-  ".fastlylb.":"Fastly",
-  ".google.":"Google",
-  "googlesyndication.":"Google",
-  "youtube.":"Google",
-  ".googleusercontent.":"Google",
-  ".l.doubleclick.":"Google",
-  "d.gcdn.":"G-core",
-  ".hiberniacdn.":"Hibernia",
-  ".hwcdn.":"Highwinds",
-  ".incapdns.":"Incapsula",
-  ".inscname.":"Instartlogic",
-  ".insnw.":"Instartlogic",
-  ".internapcdn.":"Internap",
-  ".kxcdn.":"KeyCDN",
-  ".lswcdn.":"LeaseWeb CDN",
-  ".footprint.":"Level3",
-  ".llnwd.":"Limelight",
-  ".lldns.":"Limelight",
-  ".netdna-cdn.":"MaxCDN",
-  ".netdna-ssl.":"MaxCDN",
-  ".netdna.":"MaxCDN",
-  ".stackpathdns.":"StackPath",
-  ".mncdn.":"Medianova",
-  ".instacontent.":"Mirror Image",
-  ".mirror-image.":"Mirror Image",
-  ".cap-mii.":"Mirror Image",
-  ".rncdn1.":"Reflected Networks",
-  ".simplecdn.":"Simple CDN",
-  ".swiftcdn1.":"SwiftCDN",
-  ".swiftserve.":"SwiftServe",
-  ".gslb.taobao.":"Taobao",
-  ".cdn.bitgravity.":"Tata communications",
-  ".cdn.telefonica.":"Telefonica",
-  ".vo.msecnd.":"Windows Azure",
-  ".ay1.b.yahoo.":"Yahoo",
-  ".yimg.":"Yahoo",
-  ".zenedge.":"Zenedge",
-  ".b-cdn.":"BunnyCDN",
-  ".ksyuncdn.":"Kingsoft"
+  "akadns": "Akamai",
+  "akagtm": "Akamai",
+  "akahost": "Akamai",
+  "akamai": "Akamai",
+  "akaquill": "Akamai",
+  "akasecure": "Akamai",
+  "akascripcn": "Akamai",
+  "edgekey": "Akamai",
+  "edgesuite": "Akamai",
+  "alibaba": "Alibaba Cloud",
+  "aliyun": "Alibaba Cloud",
+  "aliyuncs": "Alibaba Cloud",
+  "cdngslb": "Alibaba Cloud",
+  "alicdn": "Alibaba Cloud",
+  "alikunlun": "Alibaba Cloud",
+  "kunlunaq": "Alibaba Cloud",
+  "kunlunar": "Alibaba Cloud",
+  "kunluncan": "Alibaba Cloud",
+  "kunlunsl": "Alibaba Cloud",
+  "kunlunso": "Alibaba Cloud",
+  "queniuaa": "Alibaba Cloud",
+  "queniuak": "Alibaba Cloud",
+  "queniubg": "Alibaba Cloud",
+  "queniucf": "Alibaba Cloud",
+  "queniuco": "Alibaba Cloud",
+  "queniufm": "Alibaba Cloud",
+  "queniuhy": "Alibaba Cloud",
+  "queniuiq": "Alibaba Cloud",
+  "queniukr": "Alibaba Cloud",
+  "queniukw": "Alibaba Cloud",
+  "queniulf": "Alibaba Cloud",
+  "queniurc": "Alibaba Cloud",
+  "queniuso": "Alibaba Cloud",
+  "queniusy": "Alibaba Cloud",
+  "queniusz": "Alibaba Cloud",
+  "queniutc": "Alibaba Cloud",
+  "queniuuf": "Alibaba Cloud",
+  "queniuum": "Alibaba Cloud",
+  "queniuyk": "Alibaba Cloud",
+  "cloudfront": "Amazon Cloudfront",
+  "apple": "Apple CDN",
+  "msedge": "Azure Front Door",
+  "baidu": "Baidu",
+  "bdimb": "Baidu",
+  "bdstatic": "Baidu",
+  "gshifen": "Baidu",
+  "popin": "Baidu",
+  "shifen": "Baidu",
+  "bcebos": "Baidu",
+  "bdydns": "Baidu",
+  "baicdnx": "BaishanCloud",
+  "baishan": "BaishanCloud",
+  "bsgslb": "BaishanCloud",
+  "b-cdn": "Bunny",
+  "bunny": "Bunny",
+  "cachefly": "CacheFly",
+  "cdn77": "CDN77",
+  "panthercdn": "CDNetworks",
+  "cdngc": "CDNetworks",
+  "gccdn": "CDNetworks",
+  "cdnify": "CDNify",
+  "cloudflare": "Cloudflare",
+  "alphacdn": "Edgio",
+  "chicdn": "Edgio",
+  "deltacdn": "Edgio",
+  "delvenetworks": "Edgio",
+  "edg": "Edgio",
+  "edgecast": "Edgio",
+  "edgecastcdn": "Edgio",
+  "edgecastdns": "Edgio",
+  "epsiloncdn": "Edgio",
+  "gammacdn": "Edgio",
+  "iotacdn": "Edgio",
+  "kappacdn": "Edgio",
+  "limelight": "Edgio",
+  "lldns": "Edgio",
+  "llnw-trials": "Edgio",
+  "llnw": "Edgio",
+  "llnw": "Edgio",
+  "llnwd": "Edgio",
+  "llnwi": "Edgio",
+  "mucdn": "Edgio",
+  "nucdn": "Edgio",
+  "omegacdn": "Edgio",
+  "omicroncdn": "Edgio",
+  "phicdn": "Edgio",
+  "rhocdn": "Edgio",
+  "sigmacdn": "Edgio",
+  "systemcdn": "Edgio",
+  "taucdn": "Edgio",
+  "thetacdn": "Edgio",
+  "upsiloncdn": "Edgio",
+  "verizondigitalmedia": "Edgio",
+  "xicdn": "Edgio",
+  "zetacdn": "Edgio",
+  "fastly": "Fastly",
+  "secretcdn": "Fastly",
+  "google": "Google Edge",
+  "cdnhwc1": "Huawei",
+  "cdnhwc2": "Huawei",
+  "cdnhwc3": "Huawei",
+  "cdnhwc4": "Huawei",
+  "cdnhwc5": "Huawei",
+  "cdnhwc6": "Huawei",
+  "cdnhwc7": "Huawei",
+  "cdnhwc8": "Huawei",
+  "livehwc3": "Huawei",
+  "keycdn": "KeyCDN",
+  "kxcdn": "KeyCDN",
+  "ks-cdn": "Kingsoft",
+  "ksycdn": "Kingsoft",
+  "ksyuncdn": "Kingsoft",
+  "footprint": "Lumen",
+  "fbcdn": "Meta CDN",
+  "netflix": "Netflix CDN",
+  "nflx": "Netflix CDN",
+  "highwinds": "StackPath",
+  "hwcdn": "StackPath",
+  "stackpath": "StackPath",
+  "steamcontent": "Steam CDN",
+  "myqcloud": "Tencent Cloud CDN",
+  "ovscdns": "Tencent Cloud CDN",
+  "qcloudcdn": "Tencent Cloud CDN",
+  "cdn20": "Wangsu",
+  "cdn30": "Wangsu",
+  "cdnetworks": "Wangsu",
+  "cdngslb": "Wangsu",
+  "cdnvideo": "Wangsu",
+  "chinanetcenter": "Wangsu",
+  "gccdn": "Wangsu",
+  "lxdns": "Wangsu",
+  "qtlcdn": "Wangsu",
+  "quantil": "Wangsu",
+  "wangsu": "Wangsu",
+  "wscdns": "Wangsu",
+  "wscloudcdn": "Wangsu",
+  "wsdvs": "Wangsu",
+  "wsglb0": "Wangsu",
+  "wswebcdn": "Wangsu",
+  "wswebpic": "Wangsu",
+  "wtxcdn": "Wangsu",
+  "warnermediacdn": "Warner Brothers Discovery CDN",
+  "yahoo": "Yahoo"
 }
 
 ip_AS_map = {}
@@ -138,7 +165,7 @@ def download_list():
         print("Already Has Tranco List Downloaded...")
 
 def rewrite_tranco_list():
-    max_file_size = 100
+    max_file_size = 1000
     if not os.path.isfile("tranco_list.txt"):
         print("Reformating Tranco List...")
         file = pd.read_csv("download_list.csv", header=None)
@@ -160,29 +187,7 @@ def download_ip_to_AS():
         print("Finished Downloading ip:AS List...")
     else:
         print("Already Has ip:AS List Downloaded...")
-
-        
-def match(mask, IP):
-    min_ip = mask.split(' - ')[0].split('.')
-    max_ip = mask.split(' - ')[1].split('.')
-    range4 = range(int(min_ip[-2]), int(max_ip[-2]) + 1)
-    range3 = range(int(min_ip[-1]), int(max_ip[-1]) + 1)
-
-    ip = IP.split(".")
-    if ((int(ip[-2]) in range3) and (int(ip[-1]) in range4)):
-        return True
-
-    return False
-
-def match2(mask, IP):
-    min_ip = mask.split(' - ')[0].split('.')
-    max_ip = mask.split(' - ')[1].split('.')
-    ip = IP.split('.')
-    for i in range(4):
-        if int(ip[i]) < int(min_ip[i]) or int(ip[i]) > int(max_ip[i]):
-            return False
-    return True
-  
+ 
 
 def rewrite_ip_to_AS():
     print("Reformating ip:AS List...")
@@ -191,8 +196,27 @@ def rewrite_ip_to_AS():
         mask = file.iloc[i, 0] + " - " + file.iloc[i, 1]
         if len(mask.split(".")[0]) <= 3:
             ip_AS_map[mask] = file.iloc[i, 2]
-    print(ip_AS_map)
     print("Finished Formatting ip:AS List...")
+
+
+def is_ip(ip):
+    ip1 = ip.split(":")[0]
+    ip_arr = ip1.split(".")
+    print(ip_arr)
+    for i in range(4):
+        if not ip_arr[i].isnumeric():
+            return False
+    return len(ip_arr) == 4
+
+
+def ip_match(mask, IP):
+    min_ip = mask.split(' - ')[0].split('.')
+    max_ip = mask.split(' - ')[1].split('.')
+    ip = IP.split('.')
+    for i in range(4):
+        if int(ip[i]) < int(min_ip[i]) or int(ip[i]) > int(max_ip[i]):
+            return False
+    return True
 
         
 def get_cdn(hostname):
@@ -203,9 +227,10 @@ def get_cdn(hostname):
             num_found += 1
             return CDN_map[i]
     
-        #check for IP mapping
+    #check for ip mapping
+    if is_ip(hostname):
         for j in ip_AS_map:
-            if match2(j, i):
+            if ip_match(j, hostname):
                 return ip_AS_map[j]
 
     return "Not Found"
@@ -231,6 +256,7 @@ def run_zdns_requests():
             for answer in json.loads(i)["data"]["answers"]:
                 if answer["type"] == "CNAME":
                     ip_map[answer["name"]] = answer["answer"]
+                    cname_matches += 1
                     hit = True
                     break
             if not hit:
@@ -248,7 +274,7 @@ def run_zdns_requests():
     file.close()
     file = open("ip_map.txt", "a")
     for i in ip_map:
-        file.write(i + " " + get_cdn(i) + "\n")    
+        file.write(i + " " + get_cdn(ip_map[i]) + "\n")    
     print("Percent Found: " + str(100 * (num_found / cname_matches)))
     print("CName Matches Found: " + str(100 * (cname_matches / len(ip_map))))
     file.close()
