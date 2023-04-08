@@ -202,7 +202,6 @@ def rewrite_ip_to_AS():
 def is_ip(ip):
     ip1 = ip.split(":")[0]
     ip_arr = ip1.split(".")
-    print(ip_arr)
     for i in range(4):
         if not ip_arr[i].isnumeric():
             return False
@@ -210,15 +209,12 @@ def is_ip(ip):
 
 
 def ip_match(mask, IP):
-    min_ip = mask.split(' - ')[0].split('.')
-    max_ip = mask.split(' - ')[1].split('.')
-    ip = IP.split('.')
-    for i in range(4):
-        if int(ip[i]) < int(min_ip[i]) or int(ip[i]) > int(max_ip[i]):
-            return False
-    return True
+    min_ip = mask.split(' - ')[0].replace(".", "")
+    max_ip = mask.split(' - ')[1].replace(".", "")
+    ip = IP.split(":")[0].replace(".", "")
+    return ip > min_ip and ip < max_ip
 
-        
+
 def get_cdn(hostname):
     for i in CDN_map:
         #check for CNAME mapping
@@ -231,6 +227,7 @@ def get_cdn(hostname):
     if is_ip(hostname):
         for j in ip_AS_map:
             if ip_match(j, hostname):
+                num_found += 1
                 return ip_AS_map[j]
 
     return "Not Found"
@@ -274,9 +271,8 @@ def run_zdns_requests():
     file.close()
     file = open("ip_map.txt", "a")
     for i in ip_map:
-        file.write(i + " " + get_cdn(ip_map[i]) + "\n")    
-    print("Percent Found: " + str(100 * (num_found / cname_matches)))
-    print("CName Matches Found: " + str(100 * (cname_matches / len(ip_map))))
+        file.write(i + " " + get_cdn(ip_map[i]) + "\n")
+    print("Percent Found: " + str(100 * (num_found / len(ip_map))))
     file.close()
     print("Completed ZDNS Requests...")
 
