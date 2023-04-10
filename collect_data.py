@@ -152,6 +152,8 @@ CDN_map = {
 
 ip_AS_map = {}
 
+cdn_list = {}
+
 num_found = 0
 
 def download_list():
@@ -221,6 +223,9 @@ def get_cdn(hostname):
         if i in hostname:
             global num_found
             num_found += 1
+            if not str(CDN_map[i]) in cdn_list:
+                cdn_list[str(CDN_map[i])] = []
+            cdn_list[str(CDN_map[i])].append(str(hostname))
             return CDN_map[i]
     
     #check for ip mapping
@@ -228,6 +233,9 @@ def get_cdn(hostname):
         for j in ip_AS_map:
             if ip_match(j, hostname):
                 num_found += 1
+                if not str(ip_AS_map[j]) in cdn_list:
+                    cdn_list[str(ip_AS_map[j])] = []
+                cdn_list[str(ip_AS_map[j])].append(str(hostname)) 
                 return ip_AS_map[j]
 
     return "Not Found"
@@ -276,8 +284,20 @@ def run_zdns_requests():
     file.close()
     print("Completed ZDNS Requests...")
 
+
+def output_results():
+    print("Formatting Data...")
+    file = open("results.txt", "w")
+    file.close()
+    file = open("results.txt", "a")
+    for i in cdn_list:
+        file.write(i + ": " + str(len(cdn_list[i])) + "\n")
+    file.close()
+    print("Completed Formatting Data...")
+
 download_list()
 rewrite_tranco_list()
 download_ip_to_AS()
 rewrite_ip_to_AS()
 run_zdns_requests()
+output_results()
