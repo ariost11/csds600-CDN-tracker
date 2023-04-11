@@ -156,6 +156,8 @@ cdn_list = {}
 
 num_found = 0
 
+not_found = 0
+
 def download_list():
     if not os.path.isfile("download_list.csv"):
         print("Downloading Tranco List...")
@@ -167,7 +169,7 @@ def download_list():
         print("Already Has Tranco List Downloaded...")
 
 def rewrite_tranco_list():
-    max_file_size = 1000
+    max_file_size = 100
     if not os.path.isfile("tranco_list.txt"):
         print("Reformating Tranco List...")
         file = pd.read_csv("download_list.csv", header=None)
@@ -233,11 +235,14 @@ def get_cdn(hostname):
         for j in ip_AS_map:
             if ip_match(j, hostname):
                 num_found += 1
-                if not str(ip_AS_map[j]) in cdn_list:
-                    cdn_list[str(ip_AS_map[j])] = []
-                cdn_list[str(ip_AS_map[j])].append(str(hostname)) 
-                return ip_AS_map[j]
-
+                #get matching CDN if exists:
+                matched_cdn = match_as_desc_to_cdn(str(ip_AS_map[j]))
+                if not matched_cdn in cdn_list:
+                    cdn_list[matched_cdn] = []
+                cdn_list[matched_cdn].append(str(hostname)) 
+                return matched_cdn
+    global not_found 
+    not_found += 1
     return "Not Found"
 
 
@@ -280,9 +285,16 @@ def run_zdns_requests():
     file = open("ip_map.txt", "a")
     for i in ip_map:
         file.write(i + " " + get_cdn(ip_map[i]) + "\n")
-    print("Percent Found: " + str(100 * (num_found / len(ip_map))))
+    print("Percent Found: " + str(100 * (num_found / len(ip_map))) + "%")
     file.close()
     print("Completed ZDNS Requests...")
+
+
+def match_as_desc_to_cdn(as_desc):
+    for i in CDN_map.values():
+        if i.split(" ")[0].lower() in as_desc.lower():
+            return i
+    return as_desc
 
 
 def output_results():
@@ -291,7 +303,8 @@ def output_results():
     file.close()
     file = open("results.txt", "a")
     for i in cdn_list:
-        file.write(i + ": " + str(len(cdn_list[i])) + "\n")
+        file.write(i + ":" + str(len(cdn_list[i])) + "\n")
+    file.write("Not Found:" + str(not_found) + "\n")
     file.close()
     print("Completed Formatting Data...")
 
