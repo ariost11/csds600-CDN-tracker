@@ -152,6 +152,7 @@ CDN_map = {
 
 ip_AS_map = {}
 cdn_list = {}
+max_file_size = 1000
 
 def download_list():
     if not os.path.isfile("download_list.csv"):
@@ -164,7 +165,6 @@ def download_list():
         print("Already Has Tranco List Downloaded...")
 
 def rewrite_tranco_list():
-    max_file_size = 100
     if not os.path.isfile("tranco_list.txt"):
         print("Reformating Tranco List...")
         file = pd.read_csv("download_list.csv", header=None)
@@ -198,15 +198,6 @@ def rewrite_ip_to_AS():
     print("Finished Formatting ip:AS List...")
 
 
-def is_ip(ip):
-    ip1 = ip.split(":")[0]
-    ip_arr = ip1.split(".")
-    for i in range(4):
-        if not ip_arr[i].isnumeric():
-            return False
-    return len(ip_arr) == 4
-
-
 def ip_match(mask, IP):
     min_ip = mask.split(' - ')[0].replace(".", "")
     max_ip = mask.split(' - ')[1].replace(".", "")
@@ -214,27 +205,27 @@ def ip_match(mask, IP):
     return ip > min_ip and ip < max_ip
 
 
-def get_cdn(hostname):
-    for i in CDN_map:
-        #check for CNAME mapping
-        if i in hostname:
-            if not str(CDN_map[i]) in cdn_list:
-                cdn_list[str(CDN_map[i])] = []
-            cdn_list[str(CDN_map[i])].append(str(hostname))
-            return CDN_map[i]
-    
-    #check for ip mapping
-    if is_ip(hostname):
+def get_cdn(hostname_arr):
+    if hostname_arr[0] != None: #CNAME mapping exists
+        for i in CDN_map:
+            if i in hostname_arr[0]:
+                if not str(CDN_map[i]) in cdn_list:
+                    cdn_list[str(CDN_map[i])] = []
+                cdn_list[str(CDN_map[i])].append(str(hostname_arr[0]))
+                return CDN_map[i]
+    elif hostname_arr[1] != " ":
         for j in ip_AS_map:
-            if ip_match(j, hostname):
+            if ip_match(j, hostname_arr[1]):
                 #get matching CDN if exists:
                 matched_cdn = match_as_desc_to_cdn(str(ip_AS_map[j]))
                 if not matched_cdn in cdn_list:
                     cdn_list[matched_cdn] = []
-                cdn_list[matched_cdn].append(str(hostname)) 
-                return matched_cdn 
-    return "Not Found"
-
+                cdn_list[matched_cdn].append(str(hostname_arr[1]))
+                return matched_cdn
+    else: 
+        print(hostname_arr)
+        return "Not Found"
+    
 
 def run_zdns_requests():
     print("Running ZDNS Requests...")
@@ -267,7 +258,7 @@ def run_zdns_requests():
     file.close()
     file = open("zdns_response.txt", "a")
     for i in zdns_response:
-        file.write(i + ": (" + str(zdns_response[i][0]) + ", " + str(zdns_response[i][1]) + ")\n")#get_cdn(zdns_response[i]) + "\n")
+        file.write(i + ": (" + str(zdns_response[i][0]) + ", " + str(zdns_response[i][1]) + ": " + str(get_cdn(zdns_response[i])) + ")\n")#get_cdn(zdns_response[i]) + "\n")
     file.close()
     print("Completed ZDNS Requests...")
 
@@ -284,14 +275,18 @@ def output_results():
     file = open("results.txt", "w")
     file.close()
     file = open("results.txt", "a")
+    matched = 0
     for i in cdn_list:
+        matched += len(cdn_list[i])
         file.write(i + ":" + str(len(cdn_list[i])) + "\n")
+    file.write("Not Found:" + str(max_file_size - matched) + "\n")
+    file.write("Percent Matched: " + str((matched / max_file_size) * 100) + "\n")
     file.close()
     print("Completed Formatting Data...")
 
 download_list()
 rewrite_tranco_list()
-#download_ip_to_AS()
-#rewrite_ip_to_AS()
+download_ip_to_AS()
+rewrite_ip_to_AS()
 run_zdns_requests()
 output_results()
