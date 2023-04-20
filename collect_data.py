@@ -151,12 +151,7 @@ CDN_map = {
 }
 
 ip_AS_map = {}
-
 cdn_list = {}
-
-num_found = 0
-
-not_found = 0
 
 def download_list():
     if not os.path.isfile("download_list.csv"):
@@ -223,8 +218,6 @@ def get_cdn(hostname):
     for i in CDN_map:
         #check for CNAME mapping
         if i in hostname:
-            global num_found
-            num_found += 1
             if not str(CDN_map[i]) in cdn_list:
                 cdn_list[str(CDN_map[i])] = []
             cdn_list[str(CDN_map[i])].append(str(hostname))
@@ -234,15 +227,12 @@ def get_cdn(hostname):
     if is_ip(hostname):
         for j in ip_AS_map:
             if ip_match(j, hostname):
-                num_found += 1
                 #get matching CDN if exists:
                 matched_cdn = match_as_desc_to_cdn(str(ip_AS_map[j]))
                 if not matched_cdn in cdn_list:
                     cdn_list[matched_cdn] = []
                 cdn_list[matched_cdn].append(str(hostname)) 
-                return matched_cdn
-    global not_found 
-    not_found += 1
+                return matched_cdn 
     return "Not Found"
 
 
@@ -256,36 +246,28 @@ def run_zdns_requests():
     json_list = json_list[:len(json_list) - 1]
 
     #store in dictionary
-    ip_map = {}
-    
-    cname_matches = 0
+    zdns_response = {}
 
     for i in json_list:
-        if "answers" in json.loads(i)["data"]:
-            hit = False
+        entry = [None] * 2
+        if "answers" in json.loads(i)["data"]: #zdns request got a response of some sort
             for answer in json.loads(i)["data"]["answers"]:
-                if answer["type"] == "CNAME":
-                    ip_map[answer["name"]] = answer["answer"]
-                    cname_matches += 1
-                    hit = True
-                    break
-            if not hit:
-                if "resolver" in json.loads(i)["data"]:
-                    ip_map[json.loads(i)["name"]] = json.loads(i)["data"]["resolver"]
-                else:
-                    ip_map[json.loads(i)["name"]] = "NA"
-        else:
+                if answer["type"] == "CNAME": #zdns request got a CNAME response
+                    entry[0] = answer["answer"]
+            #adding IP from A response
             if "resolver" in json.loads(i)["data"]:
-                ip_map[json.loads(i)["name"]] = json.loads(i)["data"]["resolver"]
-            else:
-                ip_map[json.loads(i)["name"]] = "NA"
+                entry[1] = json.loads(i)["data"]["resolver"]
+        else: #zdns request doesn't have a data field but still got a response
+            if "resolver" in json.loads(i)["data"]:
+                entry[1] = json.loads(i)["data"]["resolver"]
+                
+        zdns_response[json.loads(i)["name"]] = entry
     
-    file = open("ip_map.txt", "w")
+    file = open("zdns_response.txt", "w")
     file.close()
-    file = open("ip_map.txt", "a")
-    for i in ip_map:
-        file.write(i + " " + get_cdn(ip_map[i]) + "\n")
-    print("Percent Found: " + str(100 * (num_found / len(ip_map))) + "%")
+    file = open("zdns_response.txt", "a")
+    for i in zdns_response:
+        file.write(i + ": (" + str(zdns_response[i][0]) + ", " + str(zdns_response[i][1]) + ")\n")#get_cdn(zdns_response[i]) + "\n")
     file.close()
     print("Completed ZDNS Requests...")
 
@@ -304,13 +286,12 @@ def output_results():
     file = open("results.txt", "a")
     for i in cdn_list:
         file.write(i + ":" + str(len(cdn_list[i])) + "\n")
-    file.write("Not Found:" + str(not_found) + "\n")
     file.close()
     print("Completed Formatting Data...")
 
 download_list()
 rewrite_tranco_list()
-download_ip_to_AS()
-rewrite_ip_to_AS()
+#download_ip_to_AS()
+#rewrite_ip_to_AS()
 run_zdns_requests()
 output_results()
