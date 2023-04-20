@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 import json
 import subprocess
+import re
 
 CDN_map = { 
   "akadns": "Akamai",
@@ -152,7 +153,7 @@ CDN_map = {
 
 ip_AS_map = {}
 cdn_list = {}
-max_file_size = 1000
+max_file_size = 50000
 
 def download_list():
     if not os.path.isfile("download_list.csv"):
@@ -211,9 +212,9 @@ def get_cdn(hostname_arr):
             if i in hostname_arr[0]:
                 if not str(CDN_map[i]) in cdn_list:
                     cdn_list[str(CDN_map[i])] = []
-                cdn_list[str(CDN_map[i])].append(str(hostname_arr[0]))
+                cdn_list[str(CDN_map[i])].append(str(hostname_arr[0])) 
                 return CDN_map[i]
-    elif hostname_arr[1] != " ":
+    if any(i.isdigit() for i in hostname_arr[1]):
         for j in ip_AS_map:
             if ip_match(j, hostname_arr[1]):
                 #get matching CDN if exists:
@@ -223,7 +224,6 @@ def get_cdn(hostname_arr):
                 cdn_list[matched_cdn].append(str(hostname_arr[1]))
                 return matched_cdn
     else: 
-        print(hostname_arr)
         return "Not Found"
     
 
@@ -258,7 +258,7 @@ def run_zdns_requests():
     file.close()
     file = open("zdns_response.txt", "a")
     for i in zdns_response:
-        file.write(i + ": (" + str(zdns_response[i][0]) + ", " + str(zdns_response[i][1]) + ": " + str(get_cdn(zdns_response[i])) + ")\n")#get_cdn(zdns_response[i]) + "\n")
+        file.write(i + ": (" + str(zdns_response[i][0]) + ", " + str(zdns_response[i][1]) + "): " + str(get_cdn(zdns_response[i])) + "\n")
     file.close()
     print("Completed ZDNS Requests...")
 
@@ -283,6 +283,7 @@ def output_results():
     file.write("Percent Matched: " + str((matched / max_file_size) * 100) + "\n")
     file.close()
     print("Completed Formatting Data...")
+
 
 download_list()
 rewrite_tranco_list()
