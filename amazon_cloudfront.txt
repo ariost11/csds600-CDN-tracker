@@ -1,0 +1,2 @@
+Amazon Cloudfront:
+["www.ifastnet.com", "www.directorysecure.com", "www.kustomerapp.com", "www.inauth.com", "www.aplaceformom.com", "www.cronica.com.ar", "www.lseg.com", "www.paulgraham.com", "www.auth0.com", "www.berneroberlaender.ch", "www.vteximg.com.br", "www.toyotacertificados.com", "www.ftserussell.com"]

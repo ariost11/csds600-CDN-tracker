@@ -1,0 +1,2 @@
+Cloudflare:
+["www.utc.edu", "www.carlsberguk.co.uk", "www.eurid.eu", "www.dasoertliche.de", "www.hbfile.net", "www.conac.cn", "www.ipsosisay.com", "www.greatwolf.com", "www.padi.com", "www.hotexamples.com", "www.allmodern.com", "www.brownsfashion.com"]

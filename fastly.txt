@@ -1,0 +1,2 @@
+Fastly:
+["www.foxnews.com", "www.revistagq.com", "www.sfgate.com", "www.greenhouse.io", "www.aetv.com", "www.pitt.edu", "www.melmagazine.com", "www.eater.com", "www.guardian.co.uk"]

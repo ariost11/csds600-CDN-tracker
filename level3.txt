@@ -1,0 +1,2 @@
+LEVEL3:
+["www.2shared.com", "www.tng.de", "www.accelerated.de", "www.clodo.ru", "www.satserver.nl", "www.auto.ru", "www.streetmap.co.uk", "www.telekom.at", "www.interpest.net", "www.panasonic.jp", "www.allegroimg.com", "www.colliderporn.com", "www.valeo.com"]

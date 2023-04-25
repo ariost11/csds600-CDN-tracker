@@ -153,7 +153,7 @@ CDN_map = {
 
 ip_AS_map = {}
 cdn_list = {}
-max_file_size = 50000
+max_file_size = 800000
 
 def download_list():
     if not os.path.isfile("download_list.csv"):
@@ -243,7 +243,7 @@ def run_zdns_requests():
         entry = [None] * 2
         if "answers" in json.loads(i)["data"]: #zdns request got a response of some sort
             for answer in json.loads(i)["data"]["answers"]:
-                if answer["type"] == "CNAME": #zdns request got a CNAME response
+                if "type" in answer and answer["type"] == "CNAME": #zdns request got a CNAME response
                     entry[0] = answer["answer"]
             #adding IP from A response
             if "resolver" in json.loads(i)["data"]:
