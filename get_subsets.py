@@ -5,6 +5,7 @@ import json
 import subprocess
 import re
 import random
+from datetime import datetime
 
 top_seven = ["France Telecom - Orange", "SIFY-AS-IN Sify Limited", "Akamai", "LEVEL3", "Amazon Cloudfront", "Cloudflare", "Fastly"]
 
@@ -137,14 +138,23 @@ def pings():
         file = open("active_data/pings/" + name + "_top50k.txt", "a")
         for tuple in top50k[name]:
             hostname = tuple.split("\t")[0]
-            ip = tuple.split("\t")[1]
-            
-            command = "ping " + ip + " -c 5 -i .2 | grep rtt"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-            output,error = process.communicate()
-            result = output.decode().split("\n")[0]
 
-            file.write(hostname + " " + result + "\n")
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
+            output,error = process.communicate()
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
+            
+                    command = "ping " + ip + " -c 5 -i .2 | grep rtt"
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    result = output.decode().split("\n")[0]
+
+                    file.write(hostname + " " + result + "\n")
+                    break
         file.close()
 
         file = open("active_data/pings/" + name + "_top300k.txt", "w")
@@ -152,14 +162,23 @@ def pings():
         file = open("active_data/pings/" + name + "_top300k.txt", "a")
         for tuple in top300k[name]:
             hostname = tuple.split("\t")[0]
-            ip = tuple.split("\t")[1]
             
-            command = "ping " + ip + " -c 5 -i .2 | grep rtt"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
             output,error = process.communicate()
-            result = output.decode().split("\n")[0]
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
+            
+                    command = "ping " + ip + " -c 5 -i .2 | grep rtt"
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    result = output.decode().split("\n")[0]
 
-            file.write(hostname + " " + result + "\n")
+                    file.write(hostname + " " + result + "\n")
+                    break
         file.close()
 
         file = open("active_data/pings/" + name + "_top800k.txt", "w")
@@ -167,70 +186,105 @@ def pings():
         file = open("active_data/pings/" + name + "_top800k.txt", "a")
         for tuple in top800k[name]:
             hostname = tuple.split("\t")[0]
-            ip = tuple.split("\t")[1]
             
-            command = "ping " + ip + " -c 5 -i .2 | grep rtt"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
             output,error = process.communicate()
-            result = output.decode().split("\n")[0]
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
 
-            file.write(hostname + " " + result + "\n")
+                    command = "ping " + ip + " -c 5 -i .2 | grep rtt"
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    result = output.decode().split("\n")[0]
+
+                    file.write(hostname + " " + result + "\n")
+                    break
         file.close()
 
 
-def first_byte():
-    #TODO: Fix the commands
-    if os.path.exists("active_data/firstbyte/"):
-        os.system("rm -rf active_data/firstbyte/")
-    os.system("mkdir active_data/firstbyte")
+def curls():
+    if os.path.exists("active_data/curls/"):
+        os.system("rm -rf active_data/curls/")
+    os.system("mkdir active_data/curls")
 
-    print("Running Time to First Byte...")
+    print("Running Curls...")
     for name in top_seven:
 
-        print("Time to First Byte on " + name + "...")
-        file = open("active_data/firstbyte/" + name + "_top50k.txt", "w")
+        print("Curling on " + name + "...")
+        file = open("active_data/curls/" + name + "_top50k.txt", "w")
         file.close()
-        file = open("active_data/firstbyte/" + name + "_top50k.txt", "a")
+        file = open("active_data/curls/" + name + "_top50k.txt", "a")
         for tuple in top50k[name]:
-            ip = tuple.split("\t")[1]
             hostname = tuple.split("\t")[0]
-            
-            command = "curl http://" + ip + " - H Host: " + hostname + " | grep time"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
             output,error = process.communicate()
-            result = output.decode().split("\n")[0]
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
 
-            file.write(hostname + " " + result + "\n")
+                    command = "curl -L --trace-ascii curl.trace --resolv " + hostname + ":443:" + ip + " -w '%{response_code} %{time_connect} %{time_starttransfer}\n' -m 5 -s -o /dev/null -k https://" + hostname
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    result = output.decode().split("\n")[0]
+
+                    file.write(hostname + " " + result + "\n")
+                    break
         file.close()
 
-        file = open("active_data/firstbyte/" + name + "_top300k.txt", "w")
+        file = open("active_data/curls/" + name + "_top300k.txt", "w")
         file.close()
-        file = open("active_data/firstbyte/" + name + "_top300k.txt", "a")
+        file = open("active_data/curls/" + name + "_top300k.txt", "a")
         for tuple in top300k[name]:
-            ip = tuple.split("\t")[1]
             hostname = tuple.split("\t")[0]
-            
-            command = "dig " + hostname + " | grep time"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
             output,error = process.communicate()
-            result = output.decode().split("\n")[0]
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
 
-            file.write(hostname + " " + result + "\n")
+                    command = "curl -L --trace-ascii curl.trace --resolv " + hostname + ":443:" + ip + " -w '%{response_code} %{time_connect} %{time_starttransfer}\n' -m 5 -s -o /dev/null -k https://" + hostname
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    result = output.decode().split("\n")[0]
+
+                    file.write(hostname + " " + result + "\n")
+                    break
         file.close()
 
-        file = open("active_data/firstbyte/" + name + "_top800k.txt", "w")
+        file = open("active_data/curls/" + name + "_top800k.txt", "w")
         file.close()
-        file = open("active_data/firstbyte/" + name + "_top800k.txt", "a")
+        file = open("active_data/curls/" + name + "_top800k.txt", "a")
         for tuple in top800k[name]:
-            ip = tuple.split("\t")[1]
             hostname = tuple.split("\t")[0]
-            
-            command = "dig " + hostname + " | grep time"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
-            output,error = process.communicate()
-            result = output.decode().split("\n")[0]
 
-            file.write(hostname + " " + result + "\n")
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
+            output,error = process.communicate()
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
+
+                    command = "curl -L --trace-ascii curl.trace --resolv " + hostname + ":443:" + ip + " -w '%{response_code} %{time_connect} %{time_starttransfer}\n' -m 5 -s -o /dev/null -k https://" + hostname
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    result = output.decode().split("\n")[0]
+
+                    file.write(hostname + " " + result + "\n")
+                    break
         file.close()
 
 
@@ -250,26 +304,42 @@ def traceroutes():
         map = {}
         for tuple in top50k[name]:
             hostname = tuple.split("\t")[0]
-            ip = tuple.split("\t")[1]
             
-            command = "traceroute -n -q 1 " + ip + " -w 1 -m 64 | awk '{print $2}'"
-            process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+            command_for_ip = "dig " + hostname + ' | grep "ANSWER SECTION" -A4'
+            process = subprocess.Popen(command_for_ip, shell=True, stdout=subprocess.PIPE)
             output,error = process.communicate()
-            results = output.decode().split("\n")
-            results = results[:len(results) - 1]
+            ip_line = output.decode().split("\n")
+            for line in ip_line:
+                ip = line.split("\tA\t")
+                if len(ip) > 1:
+                    ip = ip[1]
+            
+                    command = "traceroute -T -n -p 443 " + ip + " -m 64 | awk '{print $2}'"
+                    process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE)
+                    output,error = process.communicate()
+                    results = output.decode().split("\n")
+                    results = results[:len(results) - 1]
 
-            for result in results:
-                if not result in map:
-                    map[result] = 0
-                map[result] += 1
-        
-        for key in map:
-            file.write(key + ": " + str(map[key]) + "\n")
+                    for result in results:
+                        if not result in map:
+                            map[result] = 0
+                        map[result] += 1
+
+                    break        
+
+            for key in map:
+                file.write(key + ": " + str(map[key]) + "\n")
         file.close()
 
+start_time = datetime.now().strftime("%H:%M:%S")
+t1 = datetime.strptime(start_time, "%H:%M:%S")
 load_dictionaries()
 rewrite_zdns_responses()
 reset_dir()
 domain_lookup_times()
 pings()
+curls()
 traceroutes()
+end_time = datetime.now().strftime("%H:%M:%S")
+t2 = datetime.strptime(end_time, "%H:%M:%S")
+print("Time for measurements: " + str(t2 - t1))

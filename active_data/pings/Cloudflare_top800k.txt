@@ -1,0 +1,16 @@
+www.mms.com rtt min/avg/max/mdev = 2.887/2.975/3.017/0.047 ms
+www.aztaxes.gov rtt min/avg/max/mdev = 2.820/2.929/3.054/0.078 ms
+www.keds.com rtt min/avg/max/mdev = 2.762/2.895/2.963/0.073 ms
+www.picclife.cn 
+www.wilton.com rtt min/avg/max/mdev = 2.987/3.060/3.139/0.056 ms
+www.pjzqkj.com rtt min/avg/max/mdev = 3.006/3.059/3.114/0.038 ms
+www.lpo.fr rtt min/avg/max/mdev = 2.993/3.037/3.063/0.023 ms
+www.bipa.at rtt min/avg/max/mdev = 2.887/2.964/3.075/0.079 ms
+www.cbre.es rtt min/avg/max/mdev = 2.885/2.972/3.019/0.046 ms
+www.ably.io rtt min/avg/max/mdev = 2.839/2.900/2.981/0.046 ms
+www.deepcleanindia.com rtt min/avg/max/mdev = 254.887/256.301/259.634/1.705 ms, pipe 2
+www.poe.com rtt min/avg/max/mdev = 2.923/3.050/3.148/0.072 ms
+www.ovs.it rtt min/avg/max/mdev = 2.845/2.927/3.052/0.077 ms
+www.gp.se rtt min/avg/max/mdev = 2.924/3.017/3.131/0.073 ms
+www.aaom.com rtt min/avg/max/mdev = 2.935/2.996/3.061/0.042 ms
+www.mksa.top rtt min/avg/max/mdev = 2.964/3.044/3.108/0.054 ms

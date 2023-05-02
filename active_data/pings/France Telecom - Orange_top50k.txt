@@ -1,0 +1,81 @@
+www.astaro.com rtt min/avg/max/mdev = 2.419/2.481/2.619/0.070 ms
+www.ecorebates.com 
+www.ticketspice.com 
+www.poynter.org rtt min/avg/max/mdev = 2.927/3.001/3.070/0.058 ms
+www.intsig.net rtt min/avg/max/mdev = 206.275/206.372/206.476/0.064 ms, pipe 2
+www.p-bandai.com rtt min/avg/max/mdev = 2.489/2.533/2.567/0.031 ms
+www.hellosign.com 
+www.internet-start.net rtt min/avg/max/mdev = 140.105/140.147/140.197/0.030 ms
+www.bentley.edu rtt min/avg/max/mdev = 62.309/62.335/62.393/0.030 ms
+www.bootsnipp.com 
+www.hateblo.jp 
+www.pathfactory.com rtt min/avg/max/mdev = 2.924/2.986/3.041/0.044 ms
+www.pm.gov.au rtt min/avg/max/mdev = 4.179/4.241/4.296/0.037 ms
+www.tbb.com.tw 
+www.codehs.com rtt min/avg/max/mdev = 2.310/2.483/2.547/0.088 ms
+www.scaler.com rtt min/avg/max/mdev = 2.354/2.469/2.513/0.059 ms
+www.dmm.com rtt min/avg/max/mdev = 2.499/2.527/2.587/0.031 ms
+www.gotostage.com rtt min/avg/max/mdev = 2.369/2.489/2.574/0.068 ms
+www.bizjournals.com rtt min/avg/max/mdev = 10.995/11.080/11.156/0.058 ms
+www.bark.com 
+www.transtelco.net rtt min/avg/max/mdev = 2.991/3.078/3.209/0.079 ms
+www.kaywa.com 
+www.sanook.com 
+www.rasmussen.edu rtt min/avg/max/mdev = 2.890/2.948/3.027/0.044 ms
+www.viewsonic.com rtt min/avg/max/mdev = 2.503/2.519/2.537/0.012 ms
+www.allytech.com rtt min/avg/max/mdev = 160.336/160.531/161.134/0.302 ms
+www.surveymonkey.co.uk rtt min/avg/max/mdev = 2.454/2.508/2.555/0.041 ms
+www.btcex.com rtt min/avg/max/mdev = 2.363/2.477/2.536/0.060 ms
+www.keen.io rtt min/avg/max/mdev = 2.461/2.511/2.564/0.037 ms
+www.cao.go.jp rtt min/avg/max/mdev = 105.721/105.754/105.784/0.025 ms
+www.spoonflower.com rtt min/avg/max/mdev = 2.393/2.468/2.524/0.047 ms
+www.opb.org rtt min/avg/max/mdev = 2.930/2.994/3.064/0.042 ms
+www.ok.co.uk rtt min/avg/max/mdev = 2.433/2.536/2.607/0.058 ms
+www.quest-on-demand.com rtt min/avg/max/mdev = 2.369/2.471/2.558/0.071 ms
+www.sainsburys.co.uk rtt min/avg/max/mdev = 2.405/2.509/2.563/0.056 ms
+www.cxense.com rtt min/avg/max/mdev = 1.840/1.988/2.100/0.084 ms
+www.betakit.com rtt min/avg/max/mdev = 2.893/3.039/3.123/0.081 ms
+www.happycow.net rtt min/avg/max/mdev = 10.972/11.020/11.057/0.027 ms
+www.wftv.com rtt min/avg/max/mdev = 3.046/3.076/3.115/0.026 ms
+www.udmserve.net rtt min/avg/max/mdev = 11.500/11.681/11.889/0.123 ms
+www.boat-lifestyle.com rtt min/avg/max/mdev = 2.879/2.971/3.077/0.075 ms
+www.cornelsen.de rtt min/avg/max/mdev = 149.737/149.842/149.893/0.054 ms
+www.wspbx.com rtt min/avg/max/mdev = 4.044/4.123/4.197/0.065 ms
+www.aerolineas.com.ar rtt min/avg/max/mdev = 60.415/60.466/60.492/0.028 ms
+www.triviatoday.com 
+www.mobiletulip.com 
+www.glovoapp.com rtt min/avg/max/mdev = 2.472/2.523/2.585/0.042 ms
+www.marketwired.com rtt min/avg/max/mdev = 3.987/4.226/4.378/0.139 ms
+www.jprime.jp rtt min/avg/max/mdev = 117.458/117.483/117.507/0.017 ms
+www.phraseapp.com rtt min/avg/max/mdev = 2.384/2.426/2.467/0.028 ms
+www.home.ad.jp 
+www.ice.co.cr rtt min/avg/max/mdev = 116.136/116.416/117.036/0.317 ms
+www.americansystems.com rtt min/avg/max/mdev = 41.019/41.116/41.175/0.052 ms
+www.knoji.com rtt min/avg/max/mdev = 2.567/2.627/2.679/0.043 ms
+www.newspaperdirect.com 
+www.freitag.de rtt min/avg/max/mdev = 150.808/150.873/150.935/0.047 ms
+www.builtwith.com rtt min/avg/max/mdev = 2.411/2.488/2.549/0.048 ms
+www.cloudimg.io 
+www.reachgeneric.co.uk rtt min/avg/max/mdev = 2.435/2.500/2.564/0.054 ms
+www.abebooks.de rtt min/avg/max/mdev = 2.475/2.522/2.606/0.046 ms
+www.15gifts.com 
+www.nikonimglib.com 
+www.wsj.net rtt min/avg/max/mdev = 2.499/2.537/2.579/0.031 ms
+www.eposnowhq.com 
+www.sarenet.es rtt min/avg/max/mdev = 168.123/168.332/168.761/0.237 ms
+www.biteable.com rtt min/avg/max/mdev = 2.449/2.481/2.546/0.033 ms
+www.magicstudio.com rtt min/avg/max/mdev = 2.499/2.538/2.585/0.028 ms
+www.iflscience.com rtt min/avg/max/mdev = 2.509/2.606/2.838/0.135 ms
+www.wh00.ooo 
+www.counselingforstudents.com 
+www.amnesty.org rtt min/avg/max/mdev = 2.926/3.056/3.386/0.167 ms
+www.heise.de rtt min/avg/max/mdev = 153.627/153.726/153.879/0.082 ms
+www.ibps.in rtt min/avg/max/mdev = 269.208/269.365/269.611/0.136 ms, pipe 2
+www.acsevents.org 
+www.hkedcity.net 
+www.turtlesys.net 
+www.first-colo.net rtt min/avg/max/mdev = 153.544/153.576/153.626/0.030 ms
+www.vidiq.com rtt min/avg/max/mdev = 2.457/2.523/2.597/0.046 ms
+www.repairpal.com rtt min/avg/max/mdev = 2.669/2.937/3.903/0.482 ms
+www.lexoffice.de 
+www.cimediacloud.com rtt min/avg/max/mdev = 2.462/2.496/2.521/0.021 ms

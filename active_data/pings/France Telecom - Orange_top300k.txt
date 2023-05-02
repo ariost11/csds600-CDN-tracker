@@ -1,0 +1,356 @@
+www.msafflnk.net 
+www.leadshook.io 
+www.skyfish.com 
+www.ema.md rtt min/avg/max/mdev = 62.797/62.845/62.951/0.056 ms
+www.senecalearning.com rtt min/avg/max/mdev = 70.332/70.525/71.027/0.256 ms
+www.wantchinatimes.com 
+www.no-burn.org rtt min/avg/max/mdev = 2.547/2.610/2.646/0.034 ms
+www.fastpark.net rtt min/avg/max/mdev = 159.942/160.036/160.118/0.057 ms
+www.franksredhot.com 
+www.mecabricks.com 
+www.syngency.com rtt min/avg/max/mdev = 2.476/2.522/2.611/0.048 ms
+www.nacion.com rtt min/avg/max/mdev = 3.014/3.060/3.107/0.038 ms
+www.braunability.com 
+www.eaza.net rtt min/avg/max/mdev = 149.492/149.527/149.562/0.035 ms
+www.statdm.ru rtt min/avg/max/mdev = 191.777/191.806/191.832/0.019 ms
+www.cloud9.gg rtt min/avg/max/mdev = 2.575/2.671/2.799/0.071 ms
+www.rusdate.de rtt min/avg/max/mdev = 207.564/207.745/207.926/0.148 ms, pipe 2
+www.jobscout24.ch 
+www.sqreen.com rtt min/avg/max/mdev = 49.393/49.600/50.231/0.318 ms
+www.beginningboutique.com.au rtt min/avg/max/mdev = 2.885/2.927/2.983/0.035 ms
+www.detektorgps.com 
+www.infobunker.com rtt min/avg/max/mdev = 42.798/42.839/42.868/0.029 ms
+www.fanthreesixty.com rtt min/avg/max/mdev = 2.905/2.946/2.989/0.033 ms
+www.azonline.de rtt min/avg/max/mdev = 150.361/150.472/150.597/0.089 ms
+www.alleghenycounty.us rtt min/avg/max/mdev = 65.426/65.435/65.447/0.007 ms
+www.plumvillage.org rtt min/avg/max/mdev = 2.893/3.005/3.175/0.095 ms
+www.brighthubpm.com 
+www.marmottan.fr rtt min/avg/max/mdev = 150.684/150.797/150.950/0.086 ms
+www.itshot.com 
+www.strapi.io rtt min/avg/max/mdev = 2.943/3.001/3.106/0.057 ms
+www.ub66.com rtt min/avg/max/mdev = 2.456/2.508/2.557/0.036 ms
+www.wlu.edu rtt min/avg/max/mdev = 69.579/69.639/69.817/0.090 ms
+www.ateam-ad.jp 
+www.csidenet.com rtt min/avg/max/mdev = 109.401/109.686/110.255/0.304 ms
+www.engelholm.se 
+www.ontempworks.com rtt min/avg/max/mdev = 49.301/49.495/50.161/0.332 ms
+www.e-shopdesigner.com rtt min/avg/max/mdev = 140.975/141.234/141.928/0.354 ms
+www.prospr.work rtt min/avg/max/mdev = 70.959/71.185/71.792/0.307 ms
+www.kissonline.com rtt min/avg/max/mdev = 2.932/2.970/3.026/0.031 ms
+www.suny.edu rtt min/avg/max/mdev = 2.966/3.027/3.100/0.051 ms
+www.medela.us rtt min/avg/max/mdev = 40.088/40.114/40.133/0.020 ms
+www.4eins.de rtt min/avg/max/mdev = 159.545/159.673/159.782/0.075 ms
+www.shopee.sg rtt min/avg/max/mdev = 195.905/195.961/196.015/0.042 ms
+www.rlcdn.com rtt min/avg/max/mdev = 2.629/2.669/2.716/0.032 ms
+www.postclickmarketing.com rtt min/avg/max/mdev = 2.531/2.561/2.605/0.031 ms
+www.onrender.com rtt min/avg/max/mdev = 18.401/18.512/18.791/0.141 ms
+www.privoxy.org rtt min/avg/max/mdev = 153.637/153.698/153.736/0.036 ms
+www.craigslist.com rtt min/avg/max/mdev = 3.556/3.626/3.667/0.039 ms
+www.hoststar.ch 
+www.ucv.cl 
+www.illuvium.io rtt min/avg/max/mdev = 2.505/2.533/2.568/0.024 ms
+www.jkopay.com 
+www.houstontx.gov 
+www.mystreamplayer.com rtt min/avg/max/mdev = 71.025/71.118/71.199/0.058 ms
+www.recrutamentointeligente.net 
+www.degraeve.com 
+www.rem-graphics.net rtt min/avg/max/mdev = 70.662/70.692/70.723/0.030 ms
+www.theta360.com rtt min/avg/max/mdev = 62.839/62.929/62.991/0.055 ms
+www.baotintuc.vn rtt min/avg/max/mdev = 181.869/181.945/182.132/0.097 ms
+www.transparent.ly rtt min/avg/max/mdev = 2.436/2.506/2.573/0.050 ms
+www.eastidahonews.com 
+www.diia.gov.ua 
+www.gta.ru rtt min/avg/max/mdev = 177.005/177.032/177.079/0.024 ms
+www.gamer.nl rtt min/avg/max/mdev = 157.831/158.317/159.473/0.608 ms
+www.garvan.org.au 
+www.ppcmate.com rtt min/avg/max/mdev = 166.476/166.534/166.615/0.055 ms
+www.blogher.com rtt min/avg/max/mdev = 2.441/2.561/2.619/0.062 ms
+www.cartrade.com rtt min/avg/max/mdev = 2.513/2.569/2.695/0.071 ms
+www.indomco.org rtt min/avg/max/mdev = 2.589/2.666/2.810/0.083 ms
+www.shabakah.net.sa rtt min/avg/max/mdev = 222.016/222.367/222.588/0.206 ms, pipe 2
+www.dyinglightgame.com rtt min/avg/max/mdev = 47.822/48.043/48.524/0.248 ms
+www.okinawatimes.co.jp rtt min/avg/max/mdev = 113.961/114.017/114.079/0.051 ms
+www.vncdn.vn rtt min/avg/max/mdev = 224.607/224.786/224.930/0.105 ms, pipe 2
+www.cyprus.gov.cy 
+www.experian.com rtt min/avg/max/mdev = 4.150/4.191/4.242/0.032 ms
+www.suitesync.io rtt min/avg/max/mdev = 62.113/62.161/62.208/0.035 ms
+www.eschelon.com 
+www.softcube.com 
+www.pairsite.com rtt min/avg/max/mdev = 56.828/56.908/57.065/0.087 ms
+www.zon.pt rtt min/avg/max/mdev = 166.988/178.529/224.320/22.895 ms, pipe 2
+www.29cm.co.kr 
+www.ncgm.go.jp 
+www.playcus.com rtt min/avg/max/mdev = 2.324/2.402/2.485/0.054 ms
+www.adhouse.pro rtt min/avg/max/mdev = 190.814/190.848/190.870/0.020 ms
+www.betfred.com rtt min/avg/max/mdev = 4.092/4.144/4.176/0.030 ms
+www.3people.com.tw 
+www.edicomgroup.com rtt min/avg/max/mdev = 167.772/167.872/167.969/0.076 ms
+www.flextv.co.kr rtt min/avg/max/mdev = 143.033/143.063/143.076/0.016 ms
+www.tempoplatform.com 
+www.gatorade.com rtt min/avg/max/mdev = 4.100/4.147/4.169/0.024 ms
+www.personahost.net 
+www.talkingretail.com 
+www.syrpjbu.com rtt min/avg/max/mdev = 54.195/54.327/54.635/0.158 ms
+www.kurtgeiger.us 
+www.icma.org rtt min/avg/max/mdev = 1.946/1.994/2.059/0.045 ms
+www.extradom.pl rtt min/avg/max/mdev = 190.522/190.552/190.592/0.029 ms
+www.dictation.io rtt min/avg/max/mdev = 1.970/1.996/2.052/0.028 ms
+www.rumbleinthegarden.com rtt min/avg/max/mdev = 1.916/1.961/1.999/0.034 ms
+www.hatchbaby.com 
+www.team-cymru.com rtt min/avg/max/mdev = 2.346/2.700/3.741/0.527 ms
+www.shopventory.com rtt min/avg/max/mdev = 2.761/2.910/2.990/0.080 ms
+www.dive.games rtt min/avg/max/mdev = 2.287/2.357/2.422/0.053 ms
+www.thefirstnews.com 
+www.gph.gov.sa 
+www.policescanner.us 
+www.getmyboat.com 
+www.rosavtodor.ru 
+www.girlsofdesire.org rtt min/avg/max/mdev = 67.125/67.307/67.722/0.212 ms
+www.wikivoyage.org rtt min/avg/max/mdev = 61.200/61.325/61.418/0.099 ms
+www.similarsites.com 
+www.inanomo.com 
+www.cymru.com rtt min/avg/max/mdev = 49.397/49.441/49.488/0.031 ms
+www.affirm.ca rtt min/avg/max/mdev = 2.480/2.501/2.546/0.024 ms
+www.thefinancialdiet.com rtt min/avg/max/mdev = 62.276/62.312/62.363/0.028 ms
+www.icarros.com.br rtt min/avg/max/mdev = 2.430/2.541/2.682/0.085 ms
+www.dignifi.com rtt min/avg/max/mdev = 48.465/48.695/49.274/0.295 ms
+www.lawmatics.com rtt min/avg/max/mdev = 2.905/3.005/3.064/0.056 ms
+www.bloomfire.com rtt min/avg/max/mdev = 2.867/2.899/2.961/0.032 ms
+www.thekrazycouponlady.com rtt min/avg/max/mdev = 2.432/2.499/2.574/0.056 ms
+www.hnie.edu.cn rtt min/avg/max/mdev = 289.125/289.531/289.858/0.262 ms, pipe 2
+www.blaek.de rtt min/avg/max/mdev = 159.303/159.398/159.710/0.155 ms
+www.kgstores.com 
+www.hyperscale.com rtt min/avg/max/mdev = 28.111/28.147/28.234/0.044 ms
+www.jamacloud.com 
+www.intelligems.io rtt min/avg/max/mdev = 2.500/2.545/2.595/0.041 ms
+www.bemobtrcks.com 
+www.castleagegame.com rtt min/avg/max/mdev = 11.106/11.165/11.227/0.047 ms
+www.anzca.edu.au rtt min/avg/max/mdev = 162.220/162.310/162.387/0.067 ms
+www.hrmdirect.com rtt min/avg/max/mdev = 2.875/2.986/3.109/0.075 ms
+www.cornershop.jp 
+www.affirmtrust.com rtt min/avg/max/mdev = 47.866/48.065/48.672/0.304 ms
+www.oceans-nadia.com 
+www.constellis.com rtt min/avg/max/mdev = 2.820/2.893/2.959/0.048 ms
+www.shelterforce.org rtt min/avg/max/mdev = 1.984/2.177/2.920/0.371 ms
+www.adesk.ru rtt min/avg/max/mdev = 197.306/197.494/197.965/0.242 ms
+www.digitalone.com rtt min/avg/max/mdev = 61.671/61.742/61.828/0.051 ms
+www.searchmarketing.com 
+www.knoema.com 
+www.cuisez.com 
+www.afero.io rtt min/avg/max/mdev = 2.965/3.056/3.114/0.055 ms
+www.parkwhiz.com 
+www.evrythng.com rtt min/avg/max/mdev = 60.460/60.479/60.508/0.017 ms
+www.bot.com.tw 
+www.embratel.net.br rtt min/avg/max/mdev = 9.296/9.411/9.460/0.058 ms
+www.contentraven.com rtt min/avg/max/mdev = 62.617/62.665/62.706/0.028 ms
+www.pivotinteractives.com 
+www.silverpop.com rtt min/avg/max/mdev = 2.439/2.483/2.537/0.034 ms
+www.aspyr.com 
+www.tara.ru rtt min/avg/max/mdev = 192.954/193.130/193.385/0.150 ms
+www.residentevil.com rtt min/avg/max/mdev = 2.454/2.473/2.487/0.011 ms
+www.nanrenvip9.cc 
+www.realitymine.com rtt min/avg/max/mdev = 148.429/148.575/149.084/0.255 ms
+www.sonicdx.com.au rtt min/avg/max/mdev = 170.820/171.003/171.101/0.110 ms
+www.zyngawithfriends.com 
+www.mettl.com 
+www.emarsys.net rtt min/avg/max/mdev = 165.215/165.282/165.333/0.041 ms
+www.amateurs-gone-wild.com rtt min/avg/max/mdev = 76.634/76.724/76.812/0.057 ms
+www.cyberpowersystems.com 
+www.deliverytrafficnews.com rtt min/avg/max/mdev = 76.537/76.560/76.597/0.020 ms
+www.uwm.edu.pl 
+www.weatherlycloud.com rtt min/avg/max/mdev = 257.135/257.330/257.732/0.239 ms, pipe 2
+www.yj.fr rtt min/avg/max/mdev = 152.567/152.679/152.754/0.080 ms
+www.paintnite.com rtt min/avg/max/mdev = 2.418/2.480/2.512/0.032 ms
+www.nnnow.com 
+www.edas.info rtt min/avg/max/mdev = 62.145/62.200/62.313/0.060 ms
+www.jyes.com.tw rtt min/avg/max/mdev = 3.145/3.248/3.407/0.088 ms
+www.fast-serv.com 
+www.cloudpoint.com rtt min/avg/max/mdev = 18.056/18.146/18.210/0.050 ms
+www.hazelden.org 
+www.bandisoft.com 
+www.baqend.com rtt min/avg/max/mdev = 1.898/1.976/2.117/0.079 ms
+www.chinaedu.edu.cn 
+www.mysexymatches.com rtt min/avg/max/mdev = 62.499/62.525/62.545/0.016 ms
+www.davivienda.com rtt min/avg/max/mdev = 4.183/4.217/4.241/0.027 ms
+www.idec.net 
+www.pacificinternet.com rtt min/avg/max/mdev = 180.505/180.650/181.044/0.200 ms
+www.rusi.org rtt min/avg/max/mdev = 2.420/2.502/2.572/0.050 ms
+www.supercast.tech 
+www.intouchposonline.com 
+www.guthrie.org rtt min/avg/max/mdev = 62.564/62.580/62.616/0.019 ms
+www.ryder.com rtt min/avg/max/mdev = 64.926/64.970/65.017/0.034 ms
+www.payfit.es 
+www.muc.edu.cn rtt min/avg/max/mdev = 229.917/229.987/230.074/0.055 ms, pipe 2
+www.bandicam.co.kr rtt min/avg/max/mdev = 141.222/141.334/141.554/0.127 ms
+www.mable.ai 
+www.18p.fun rtt min/avg/max/mdev = 2.889/2.928/2.950/0.021 ms
+www.goodbullhunting.com rtt min/avg/max/mdev = 1.945/1.982/2.038/0.032 ms
+www.caz79toto.com 
+www.utel.ua rtt min/avg/max/mdev = 2.933/3.058/3.117/0.064 ms
+www.cloudx.pro rtt min/avg/max/mdev = 167.241/167.628/168.045/0.261 ms
+www.weplan-app.com rtt min/avg/max/mdev = 2.381/2.456/2.490/0.039 ms
+www.incontact.com rtt min/avg/max/mdev = 34.915/35.008/35.102/0.061 ms
+www.reservix.de 
+www.mudo.com.tr 
+www.versum.com rtt min/avg/max/mdev = 149.133/149.248/149.536/0.148 ms
+www.bookriot.com rtt min/avg/max/mdev = 62.218/62.276/62.320/0.034 ms
+www.cartaoriocard.com.br rtt min/avg/max/mdev = 4.109/4.189/4.235/0.046 ms
+www.growtix.com 
+www.comlaw.gov.au 
+www.hsu.edu rtt min/avg/max/mdev = 39.659/39.704/39.757/0.033 ms
+www.lifemote.com 
+www.albertsons.com rtt min/avg/max/mdev = 4.150/4.206/4.254/0.034 ms
+www.thaiware.com rtt min/avg/max/mdev = 207.948/208.029/208.069/0.042 ms, pipe 2
+www.sportslogos.net 
+www.nao.ac.jp rtt min/avg/max/mdev = 217.683/217.813/217.903/0.075 ms, pipe 2
+www.legerdesheils.nl rtt min/avg/max/mdev = 155.475/155.531/155.641/0.063 ms
+www.qiangmi.com 
+www.gamerant.com 
+www.osell.com rtt min/avg/max/mdev = 175.126/175.170/175.205/0.029 ms
+www.thewebconsole.com 
+www.infovalley.ad.jp 
+www.sliplay.se rtt min/avg/max/mdev = 2.357/2.551/2.635/0.098 ms
+www.grab.com rtt min/avg/max/mdev = 2.382/2.463/2.532/0.053 ms
+www.megaproxy.com 
+www.arc.gov.au rtt min/avg/max/mdev = 4.650/4.693/4.743/0.030 ms
+www.egistec.com rtt min/avg/max/mdev = 144.937/144.975/144.997/0.024 ms
+www.easee.com rtt min/avg/max/mdev = 2.894/2.934/3.026/0.048 ms
+www.redbluffdailynews.com rtt min/avg/max/mdev = 2.373/2.530/2.602/0.083 ms
+www.gio.com.au rtt min/avg/max/mdev = 4.177/4.200/4.223/0.018 ms
+www.powerhost.cl rtt min/avg/max/mdev = 164.971/165.101/165.270/0.097 ms
+www.talix.com rtt min/avg/max/mdev = 2.390/2.515/2.604/0.072 ms
+www.nasuni.com rtt min/avg/max/mdev = 2.893/2.963/3.046/0.057 ms
+www.astrazeneca.net rtt min/avg/max/mdev = 2.332/2.454/2.526/0.069 ms
+www.mypromomall.com rtt min/avg/max/mdev = 4.103/4.174/4.234/0.057 ms
+www.userway.com 
+www.thepattern.com rtt min/avg/max/mdev = 48.534/48.629/48.685/0.058 ms
+www.4tololo.ru rtt min/avg/max/mdev = 188.255/188.295/188.329/0.027 ms
+www.crossinstall.com rtt min/avg/max/mdev = 2.352/2.499/2.587/0.078 ms
+www.clicavisos.com.ar rtt min/avg/max/mdev = 186.414/186.464/186.546/0.055 ms
+www.leonardocontentcloud.com rtt min/avg/max/mdev = 62.003/62.068/62.130/0.043 ms
+www.rusiem.com rtt min/avg/max/mdev = 164.584/164.673/164.741/0.058 ms
+www.zaubacorp.com 
+www.orange.sk 
+www.datapark.ch rtt min/avg/max/mdev = 161.865/161.953/162.031/0.057 ms
+www.blinkreceipt.com rtt min/avg/max/mdev = 156.088/156.239/156.590/0.182 ms
+www.hutch.lk rtt min/avg/max/mdev = 25.129/25.207/25.315/0.067 ms
+www.whois-servers.net 
+www.zonos.com rtt min/avg/max/mdev = 2.560/2.595/2.648/0.033 ms
+www.notey.com rtt min/avg/max/mdev = 2.390/2.408/2.427/0.012 ms
+www.cobaltgroup.com rtt min/avg/max/mdev = 62.274/62.301/62.354/0.029 ms
+www.treecardgames.app rtt min/avg/max/mdev = 2.482/2.515/2.553/0.027 ms
+www.utiitsl.com rtt min/avg/max/mdev = 244.457/244.498/244.598/0.051 ms, pipe 2
+www.afip.gob.ar 
+www.omgsweeps.info 
+www.dentrixascend.com rtt min/avg/max/mdev = 23.307/23.533/23.742/0.185 ms
+www.dvec.ru 
+www.freecreditreport.com rtt min/avg/max/mdev = 4.067/4.141/4.216/0.049 ms
+www.viewsurf.com rtt min/avg/max/mdev = 144.251/144.312/144.341/0.034 ms
+www.j2c.com rtt min/avg/max/mdev = 2.437/2.492/2.518/0.029 ms
+www.wehago.com 
+www.prephoops.com rtt min/avg/max/mdev = 2.257/2.356/2.404/0.052 ms
+www.rhinoshield.io rtt min/avg/max/mdev = 2.846/2.941/3.042/0.063 ms
+www.gsngames.com 
+www.nepalembassy.gov.np 
+www.zeamster.com rtt min/avg/max/mdev = 2.970/3.046/3.118/0.047 ms
+www.costabrava.org rtt min/avg/max/mdev = 156.785/156.846/157.011/0.085 ms
+www.hkrtrainings.com 
+www.originmedia.tv rtt min/avg/max/mdev = 60.714/60.793/60.909/0.075 ms
+www.wompi.co 
+www.corelight.com rtt min/avg/max/mdev = 2.819/2.881/2.960/0.050 ms
+www.kitchenstories.com rtt min/avg/max/mdev = 2.351/2.499/2.591/0.081 ms
+www.waco-texas.com rtt min/avg/max/mdev = 4.099/4.179/4.222/0.043 ms
+www.cederj.edu.br 
+www.entregadigital.app.br 
+www.planex.co.jp rtt min/avg/max/mdev = 117.056/117.111/117.188/0.043 ms
+www.chickteases.com rtt min/avg/max/mdev = 66.893/67.050/67.490/0.222 ms
+www.money101.com.tw rtt min/avg/max/mdev = 2.357/2.479/2.555/0.068 ms
+www.hepec.edu.cn rtt min/avg/max/mdev = 191.362/191.708/191.883/0.184 ms
+www.sm.gov.cn rtt min/avg/max/mdev = 287.847/287.880/287.906/0.022 ms, pipe 2
+www.cpesr.com.ar rtt min/avg/max/mdev = 220.946/221.181/221.546/0.198 ms, pipe 2
+www.knowyourmeme.com rtt min/avg/max/mdev = 19.512/19.541/19.571/0.018 ms
+www.dsmartgo.com.tr rtt min/avg/max/mdev = 151.896/152.285/153.725/0.720 ms
+www.cribl.cloud rtt min/avg/max/mdev = 2.358/2.445/2.493/0.046 ms
+www.eironclad.com rtt min/avg/max/mdev = 17.994/18.008/18.030/0.013 ms
+www.kzhi.tech rtt min/avg/max/mdev = 273.740/273.771/273.843/0.037 ms, pipe 2
+www.mitdps.net rtt min/avg/max/mdev = 288.555/288.608/288.643/0.031 ms, pipe 2
+www.dexterchaney.com 
+www.teradyne.com rtt min/avg/max/mdev = 2.933/2.984/3.053/0.038 ms
+www.officialcharts.com 
+www.supportingcast.fm 
+www.healthx.com rtt min/avg/max/mdev = 1.833/1.978/2.058/0.078 ms
+www.codingrooms.com 
+www.earthnetworks.com rtt min/avg/max/mdev = 62.262/62.290/62.339/0.028 ms
+www.yandex.eu rtt min/avg/max/mdev = 189.682/189.739/189.789/0.035 ms
+www.invisioncommunity.com rtt min/avg/max/mdev = 2.481/2.512/2.535/0.020 ms
+www.goads.pro 
+www.chinaunicom.cn 
+www.articobits.com rtt min/avg/max/mdev = 22.435/22.580/22.997/0.210 ms
+www.cablevision.net.mx 
+www.vetsource.com rtt min/avg/max/mdev = 2.876/2.944/3.075/0.072 ms
+www.srpcompanies.com rtt min/avg/max/mdev = 2.774/2.877/2.936/0.057 ms
+www.stockideal.com rtt min/avg/max/mdev = 2.372/2.403/2.425/0.021 ms
+www.newspic.kr 
+www.lecom.edu rtt min/avg/max/mdev = 70.018/70.076/70.126/0.034 ms
+www.walutomat.pl rtt min/avg/max/mdev = 189.434/189.488/189.589/0.054 ms
+www.milacares.com 
+www.rpubs.com 
+www.cdnlogo.com rtt min/avg/max/mdev = 2.935/3.010/3.064/0.042 ms
+www.efrag.org 
+www.lgg.cl 
+www.neptune.net rtt min/avg/max/mdev = 13.902/14.378/15.102/0.514 ms
+www.mutualart.com 
+www.dailygood.org 
+www.yareel.com rtt min/avg/max/mdev = 146.461/146.482/146.504/0.016 ms
+www.smartology.co rtt min/avg/max/mdev = 2.490/2.523/2.571/0.027 ms
+www.sykescottages.co.uk 
+www.esr.cri.nz rtt min/avg/max/mdev = 4.041/4.144/4.238/0.084 ms
+www.unic.ac.cy rtt min/avg/max/mdev = 2.722/2.850/2.904/0.065 ms
+www.az.gov rtt min/avg/max/mdev = 2.951/3.029/3.090/0.046 ms
+www.stlmag.com 
+www.gotoporn.xyz rtt min/avg/max/mdev = 74.439/74.537/74.609/0.063 ms
+www.mehrdc.com rtt min/avg/max/mdev = 59.314/59.388/59.435/0.050 ms
+www.zmartagroup.com 
+www.lefaso.net rtt min/avg/max/mdev = 160.304/160.333/160.360/0.020 ms
+www.airdesksolutions.com 
+www.365scores.com rtt min/avg/max/mdev = 2.473/2.514/2.550/0.027 ms
+www.fanlink.to rtt min/avg/max/mdev = 3.578/3.610/3.660/0.027 ms
+www.yju.ac.kr 
+www.form-mailer.jp rtt min/avg/max/mdev = 113.746/113.815/113.904/0.051 ms
+www.courtlistener.com rtt min/avg/max/mdev = 2.439/2.497/2.525/0.030 ms
+www.evgnet.com 
+www.kreonet.net 
+www.bdg.kr rtt min/avg/max/mdev = 144.695/144.852/145.243/0.198 ms
+www.netjets.com rtt min/avg/max/mdev = 2.510/2.536/2.573/0.021 ms
+www.embratelcloud.com.br 
+www.sandiegouniontribune.com rtt min/avg/max/mdev = 2.345/2.384/2.433/0.029 ms
+www.babysits.com.br rtt min/avg/max/mdev = 2.356/2.457/2.632/0.095 ms
+www.gazettelive.co.uk rtt min/avg/max/mdev = 2.348/2.414/2.458/0.039 ms
+www.opera.org.au 
+www.youworkforthem.com rtt min/avg/max/mdev = 10.955/11.001/11.046/0.035 ms
+www.neo24.pl rtt min/avg/max/mdev = 2.324/2.500/2.567/0.092 ms
+www.ylopo.com rtt min/avg/max/mdev = 40.947/41.049/41.143/0.069 ms
+www.telecomottawa.com 
+www.iceportal.com 
+www.sketch.com rtt min/avg/max/mdev = 2.431/2.511/2.570/0.050 ms
+www.simple-talk.com rtt min/avg/max/mdev = 152.761/152.779/152.819/0.020 ms
+www.tommcfarlin.com rtt min/avg/max/mdev = 2.861/2.951/3.010/0.049 ms
+www.avepoint.com rtt min/avg/max/mdev = 64.864/64.915/64.949/0.029 ms
+www.mortgagecoach.com rtt min/avg/max/mdev = 59.302/59.724/60.187/0.362 ms
+www.cellcontrol.com 
+www.pornclub.com rtt min/avg/max/mdev = 70.508/70.559/70.635/0.042 ms
+www.cloud-iq.com 
+www.blinkforhome.com rtt min/avg/max/mdev = 40.961/41.004/41.067/0.035 ms
+www.bsomusic.org 
+www.pazienti.it 
+www.medicalnote.jp 
+www.g-witch.net rtt min/avg/max/mdev = 114.731/114.784/114.835/0.035 ms
+www.veronicabeard.com rtt min/avg/max/mdev = 2.913/2.953/2.986/0.027 ms
+www.h-net.org 
+www.wiadomosci24.pl rtt min/avg/max/mdev = 172.537/172.613/172.669/0.043 ms
+www.iwa.info 
+www.wtkr.com rtt min/avg/max/mdev = 2.346/2.421/2.470/0.043 ms
+www.schlitterbahn.com 
+www.alpha222.com 
+www.indianbank.net.in 
+www.retrorgb.com rtt min/avg/max/mdev = 2.453/2.483/2.526/0.034 ms

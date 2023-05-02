@@ -1,0 +1,27 @@
+www.misk.com rtt min/avg/max/mdev = 62.489/62.534/62.642/0.056 ms
+www.pcadvisor.co.uk rtt min/avg/max/mdev = 2.479/2.598/2.713/0.083 ms
+www.tvnow.de rtt min/avg/max/mdev = 2.203/2.254/2.325/0.044 ms
+www.eliteprospects.com rtt min/avg/max/mdev = 2.179/2.250/2.308/0.042 ms
+www.bitmoji.com rtt min/avg/max/mdev = 2.251/2.278/2.312/0.022 ms
+www.mercadolibre.com.co rtt min/avg/max/mdev = 2.245/2.259/2.282/0.012 ms
+www.ttb.gov rtt min/avg/max/mdev = 2.199/2.267/2.304/0.043 ms
+www.williamhill.com rtt min/avg/max/mdev = 2.232/2.295/2.341/0.037 ms
+www.gomlab.com rtt min/avg/max/mdev = 2.256/2.283/2.295/0.014 ms
+www.petzl.com rtt min/avg/max/mdev = 52.921/52.961/53.055/0.048 ms
+www.mailjet.com rtt min/avg/max/mdev = 48.420/48.547/48.972/0.212 ms
+www.levels.fyi rtt min/avg/max/mdev = 2.071/2.286/2.457/0.123 ms
+www.cronica.com.ar rtt min/avg/max/mdev = 2.138/2.223/2.278/0.046 ms
+www.imaginecurve.com rtt min/avg/max/mdev = 2.225/2.282/2.320/0.032 ms
+www.mcneel.com rtt min/avg/max/mdev = 2.238/2.293/2.402/0.058 ms
+www.tctm.co rtt min/avg/max/mdev = 2.214/2.257/2.319/0.036 ms
+www.moj.gov.sa 
+www.cdn-net.com rtt min/avg/max/mdev = 2.149/2.246/2.312/0.055 ms
+www.globalknowledge.com rtt min/avg/max/mdev = 2.216/2.262/2.303/0.029 ms
+www.blackberry.com rtt min/avg/max/mdev = 2.234/2.272/2.309/0.025 ms
+www.usmint.gov rtt min/avg/max/mdev = 2.207/2.263/2.326/0.049 ms
+www.olx.kz rtt min/avg/max/mdev = 2.246/2.270/2.294/0.017 ms
+www.uk-gsp.ru rtt min/avg/max/mdev = 189.589/189.653/189.726/0.047 ms
+www.xataka.com rtt min/avg/max/mdev = 2.209/2.298/2.494/0.101 ms
+www.travelpulse.com rtt min/avg/max/mdev = 2.205/2.277/2.343/0.045 ms
+www.fiaformulae.com rtt min/avg/max/mdev = 2.187/2.255/2.301/0.044 ms
+www.tving.com rtt min/avg/max/mdev = 2.259/2.315/2.387/0.043 ms

@@ -1,0 +1,29 @@
+www.mvs-shtraf24.space rtt min/avg/max/mdev = 177.611/177.783/178.003/0.126 ms
+www.hlavnespravy.sk 
+www.play.pl 
+www.thisvid.com rtt min/avg/max/mdev = 150.211/150.270/150.322/0.038 ms
+www.san.ru rtt min/avg/max/mdev = 200.034/200.103/200.140/0.040 ms
+www.selfhost.de rtt min/avg/max/mdev = 149.832/150.126/150.417/0.211 ms
+www.bgeneral.com rtt min/avg/max/mdev = 4.330/4.425/4.515/0.058 ms
+www.i-free.ru rtt min/avg/max/mdev = 178.639/178.674/178.769/0.048 ms
+www.rtu.lv 
+www.anu.net rtt min/avg/max/mdev = 155.292/155.592/156.284/0.367 ms
+www.edumsko.ru rtt min/avg/max/mdev = 191.498/191.529/191.560/0.025 ms
+www.nodechef.com rtt min/avg/max/mdev = 67.503/67.703/68.408/0.353 ms
+www.ipsos.com rtt min/avg/max/mdev = 2.817/2.884/3.006/0.064 ms
+www.atg.se 
+www.dsidata.sk rtt min/avg/max/mdev = 171.553/171.629/171.732/0.063 ms
+www.premiumtimesng.com rtt min/avg/max/mdev = 136.660/136.705/136.751/0.034 ms
+www.ladesk.com rtt min/avg/max/mdev = 151.427/151.576/151.649/0.078 ms
+www.vedomosti.ru rtt min/avg/max/mdev = 2.517/2.595/2.659/0.050 ms
+www.largehdtube.com rtt min/avg/max/mdev = 145.655/145.703/145.744/0.035 ms
+www.niezalezna.pl rtt min/avg/max/mdev = 179.882/179.940/179.970/0.032 ms
+www.netclusive.de rtt min/avg/max/mdev = 155.342/155.467/155.753/0.148 ms
+www.unmissions.org rtt min/avg/max/mdev = 180.642/180.876/181.631/0.379 ms
+www.openssh.com rtt min/avg/max/mdev = 35.563/35.743/35.940/0.162 ms
+www.birmingham.gov.uk rtt min/avg/max/mdev = 2.382/2.531/2.618/0.091 ms
+www.cairn.info rtt min/avg/max/mdev = 150.072/150.137/150.214/0.054 ms
+www.blackspider.com rtt min/avg/max/mdev = 140.113/140.158/140.244/0.045 ms
+www.iz.ru 
+www.pointdnshere.com 
+www.vk.link rtt min/avg/max/mdev = 182.604/182.663/182.808/0.078 ms

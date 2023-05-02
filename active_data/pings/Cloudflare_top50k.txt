@@ -1,0 +1,5 @@
+www.qlik.com rtt min/avg/max/mdev = 2.964/2.984/3.013/0.016 ms
+www.conac.cn rtt min/avg/max/mdev = 217.776/225.529/229.992/5.087 ms, pipe 2
+www.sram.com rtt min/avg/max/mdev = 2.866/2.906/3.015/0.054 ms
+www.padi.com rtt min/avg/max/mdev = 2.883/2.947/3.030/0.054 ms
+www.gwu.edu rtt min/avg/max/mdev = 2.998/3.053/3.109/0.035 ms

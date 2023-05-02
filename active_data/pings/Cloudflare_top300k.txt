@@ -1,0 +1,5 @@
+www.nethrainstruments.com rtt min/avg/max/mdev = 258.142/258.261/258.471/0.110 ms, pipe 2
+www.40sdating.com rtt min/avg/max/mdev = 2.872/2.903/2.939/0.027 ms
+www.lac.com rtt min/avg/max/mdev = 2.972/3.065/3.124/0.055 ms
+www.seek.com rtt min/avg/max/mdev = 2.910/3.029/3.247/0.122 ms
+www.cvc.com rtt min/avg/max/mdev = 2.869/2.953/3.002/0.046 ms

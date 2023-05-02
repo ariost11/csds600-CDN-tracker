@@ -1,0 +1,22 @@
+www.jqplot.com rtt min/avg/max/mdev = 71.607/71.626/71.656/0.018 ms
+www.expressionengine.com 
+www.sanqiu.mobi rtt min/avg/max/mdev = 9.451/9.495/9.563/0.044 ms
+www.hubdrive.me rtt min/avg/max/mdev = 2.787/2.827/2.864/0.028 ms
+www.midi.org rtt min/avg/max/mdev = 72.084/72.220/72.437/0.126 ms
+www.blogdon.net rtt min/avg/max/mdev = 2.968/3.481/5.319/0.919 ms
+www.kmu.edu.tw rtt min/avg/max/mdev = 146.588/146.838/147.282/0.235 ms
+www.uploadrar.com rtt min/avg/max/mdev = 163.705/163.737/163.777/0.024 ms
+www.webserversystems.com 
+www.pelisplushd.to rtt min/avg/max/mdev = 2.781/2.901/2.990/0.070 ms
+www.aia.org 
+www.pearsonassessments.com rtt min/avg/max/mdev = 9.847/9.979/10.131/0.112 ms
+www.ethereum.org rtt min/avg/max/mdev = 2.784/2.887/2.955/0.073 ms
+www.brownbook.net rtt min/avg/max/mdev = 2.870/3.027/3.289/0.143 ms
+www.revistaforum.com.br rtt min/avg/max/mdev = 2.927/3.054/3.216/0.095 ms
+www.gvsu.edu rtt min/avg/max/mdev = 2.976/3.036/3.089/0.037 ms
+www.uwinnipeg.ca 
+www.bflix.io rtt min/avg/max/mdev = 2.743/2.861/2.944/0.069 ms
+www.donweb.com rtt min/avg/max/mdev = 3.026/3.069/3.124/0.039 ms
+www.wichita.edu rtt min/avg/max/mdev = 4.044/4.188/4.285/0.079 ms
+www.scielo.org.co 
+www.cra-arc.gc.ca 

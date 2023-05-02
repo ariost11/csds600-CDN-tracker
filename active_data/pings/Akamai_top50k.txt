@@ -1,0 +1,39 @@
+www.google.com.bd rtt min/avg/max/mdev = 2.355/2.424/2.454/0.037 ms
+www.urbanairship.com rtt min/avg/max/mdev = 2.322/2.396/2.451/0.041 ms
+www.nsa.gov rtt min/avg/max/mdev = 4.456/4.530/4.664/0.071 ms
+www.geforce.com rtt min/avg/max/mdev = 10.008/10.048/10.094/0.033 ms
+www.dealmoon.com rtt min/avg/max/mdev = 30.651/30.735/30.815/0.051 ms
+www.paymentsos.com rtt min/avg/max/mdev = 4.386/4.509/4.580/0.072 ms
+www.navy.mil rtt min/avg/max/mdev = 4.459/4.529/4.653/0.067 ms
+www.autodesk.com rtt min/avg/max/mdev = 9.906/10.069/10.573/0.253 ms
+www.comerica.com rtt min/avg/max/mdev = 4.393/4.567/4.785/0.125 ms
+www.delonghi.com rtt min/avg/max/mdev = 4.417/4.484/4.622/0.073 ms
+www.thehartford.com rtt min/avg/max/mdev = 9.812/9.857/9.912/0.038 ms
+www.outback.com rtt min/avg/max/mdev = 4.522/4.630/4.673/0.056 ms
+www.ana.co.jp rtt min/avg/max/mdev = 4.462/4.508/4.537/0.028 ms
+www.playstation.com rtt min/avg/max/mdev = 9.827/9.870/9.927/0.035 ms
+www.sci.gov.in rtt min/avg/max/mdev = 4.371/4.471/4.576/0.068 ms
+www.broadsheet.com.au 
+www.calgarysun.com rtt min/avg/max/mdev = 2.680/2.713/2.755/0.028 ms
+www.zalando-lounge.nl rtt min/avg/max/mdev = 148.332/148.482/148.596/0.090 ms
+www.google.co.kr rtt min/avg/max/mdev = 2.664/2.701/2.733/0.027 ms
+www.nih.gov rtt min/avg/max/mdev = 4.410/4.445/4.475/0.024 ms
+www.edmunds.com rtt min/avg/max/mdev = 2.970/3.013/3.096/0.043 ms
+www.aok.de 
+www.ati.com rtt min/avg/max/mdev = 9.847/9.903/10.030/0.067 ms
+www.tbs.com rtt min/avg/max/mdev = 4.456/4.506/4.602/0.051 ms
+www.bonprix.de rtt min/avg/max/mdev = 2.906/2.956/3.045/0.048 ms
+www.zimlogistics.us rtt min/avg/max/mdev = 2.984/3.026/3.066/0.027 ms
+www.leju.com rtt min/avg/max/mdev = 162.095/162.178/162.358/0.094 ms
+www.shiseido.com rtt min/avg/max/mdev = 9.865/9.914/9.962/0.041 ms
+www.derstandard.de rtt min/avg/max/mdev = 9.823/9.853/9.905/0.029 ms
+www.rogers.com rtt min/avg/max/mdev = 4.645/4.744/5.047/0.152 ms
+www.milb.com rtt min/avg/max/mdev = 4.411/4.479/4.523/0.038 ms
+www.icloud.com.cn rtt min/avg/max/mdev = 4.505/4.524/4.533/0.010 ms
+www.google.co.cr rtt min/avg/max/mdev = 2.267/2.370/2.424/0.054 ms
+www.ysl.com rtt min/avg/max/mdev = 9.845/9.932/10.028/0.058 ms
+www.citizenlab.ca 
+www.newsbomb.gr rtt min/avg/max/mdev = 2.965/3.084/3.316/0.126 ms
+www.uniqlo.com rtt min/avg/max/mdev = 4.339/4.539/5.044/0.255 ms
+www.akbars.ru 
+www.nationwide.com rtt min/avg/max/mdev = 2.997/3.081/3.134/0.048 ms
